@@ -85,9 +85,9 @@ input wire pix_clk_locked;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
-input wire [3 : 0] red;
-input wire [3 : 0] green;
-input wire [3 : 0] blue;
+input wire [7 : 0] red;
+input wire [7 : 0] green;
+input wire [7 : 0] blue;
 input wire hsync;
 input wire vsync;
 input wire vde;
@@ -106,9 +106,9 @@ output wire [2 : 0] TMDS_DATA_N;
 
   hdmi_tx_v1_0 #(
     .MODE("HDMI"),
-    .C_RED_WIDTH(4),
-    .C_GREEN_WIDTH(4),
-    .C_BLUE_WIDTH(4)
+    .C_RED_WIDTH(8),
+    .C_GREEN_WIDTH(8),
+    .C_BLUE_WIDTH(8)
   ) inst (
     .pix_clk(pix_clk),
     .pix_clkx5(pix_clkx5),

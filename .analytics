@@ -1,0 +1,11 @@
+timestamp=[2023-11-15 12:20:59], mode=WORKBENCH_START, duration=0:00:04.054, duration_ms=4054, data={}
+timestamp=[2023-11-15 12:21:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.301, duration_ms=301, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-11-15 12:21:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.096, duration_ms=96, data={}
+timestamp=[2023-11-15 12:21:55], mode=APP_CREATION, duration=0:00:03.797, duration_ms=3797, data={name=donkey_kong, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=mb_usb_hdmi_top, application_type=application}
+timestamp=[2023-11-15 12:36:07], mode=PLATFORM_GENERATION, duration=0:00:04.299, duration_ms=4299, data={name=mb_usb_hdmi_top}
+timestamp=[2023-11-15 12:36:08], mode=BUILD, duration=0:00:00.255, duration_ms=255, data={name=donkey_kong, configuration=Debug, clean_build=false}
+timestamp=[2023-11-15 12:36:40], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=donkey_kong, configuration=Debug, clean_build=true}
+timestamp=[2023-11-15 12:36:41], mode=BUILD, duration=0:00:01.324, duration_ms=1324, data={name=donkey_kong, configuration=Debug, clean_build=false}
+timestamp=[2023-11-15 12:38:52], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=donkey_kong, configuration=Debug, clean_build=true}
+timestamp=[2023-11-15 12:38:53], mode=BUILD, duration=0:00:01.186, duration_ms=1186, data={name=donkey_kong, configuration=Debug, clean_build=false}
+timestamp=[2023-11-15 12:38:54], mode=BUILD, duration=0:00:00.129, duration_ms=129, data={name=donkey_kong_system, configuration=Debug, clean_build=false}

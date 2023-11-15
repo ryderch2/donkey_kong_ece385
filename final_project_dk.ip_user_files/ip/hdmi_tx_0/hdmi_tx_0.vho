@@ -57,9 +57,9 @@ COMPONENT hdmi_tx_0
     pix_clkx5 : IN STD_LOGIC;
     pix_clk_locked : IN STD_LOGIC;
     rst : IN STD_LOGIC;
-    red : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    green : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    blue : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    red : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    green : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    blue : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     hsync : IN STD_LOGIC;
     vsync : IN STD_LOGIC;
     vde : IN STD_LOGIC;

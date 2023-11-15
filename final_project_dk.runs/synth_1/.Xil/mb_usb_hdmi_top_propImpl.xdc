@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N15 [get_ports Clk]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]

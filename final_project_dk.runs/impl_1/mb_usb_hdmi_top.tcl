@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.runs/impl_1/mb_usb_hdmi_top.tcl"
+  variable script "C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/impl_1/mb_usb_hdmi_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,30 +123,34 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.cache/wt [current_project]
-  set_property parent.project_path C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.xpr [current_project]
-  set_property ip_repo_paths C:/Users/ryder/Documents/ECE385/RD_hdmi_ip2020/hdmi_tx_1.0 [current_project]
+  set_property webtalk.parent_dir C:/Users/sam/donkey_kong_ece385/final_project_dk.cache/wt [current_project]
+  set_property parent.project_path C:/Users/sam/donkey_kong_ece385/final_project_dk.xpr [current_project]
+  set_property ip_repo_paths {
+  c:/Users/sam/RD_hdmi_ip2020/hdmi_tx_1.0
+  C:/Users/sam/Documents/ECE385/RD_hdmi_ip2020
+} [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/sam/donkey_kong_ece385/final_project_dk.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.runs/synth_1/mb_usb_hdmi_top.dcp
+  add_files -quiet C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/mb_usb_hdmi_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.srcs/sources_1/bd/mb_block/mb_block.bd
-  read_ip -quiet C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet c:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+  add_files C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/bd/mb_block/mb_block.bd
+  read_ip -quiet C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
+  read_xdc C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

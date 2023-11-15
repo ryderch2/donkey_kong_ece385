@@ -1,0 +1,7 @@
+1700073020214	Move 'GenericMacros.h' to 'lw_usb'
+1700073026772	Move 'GenericTypeDefs.h' to 'lw_usb'
+1700073055539	Move 'HID.c' to 'lw_usb'
+1700073082779	Move 'HID.h' to 'lw_usb'
+1700073097350	Move 2 resources to 'lw_usb'
+1700073111107	Move 6 resources to 'lw_usb'
+1700073396441	Move 'project_config.h' to 'src'

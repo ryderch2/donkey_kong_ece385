@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699976917">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1700081415">
   <File Type="ROUTE-PWR" Name="mb_usb_hdmi_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="mb_usb_hdmi_top.tcl"/>
   <File Type="BITSTR-MMI" Name="mb_usb_hdmi_top.mmi"/>
@@ -108,10 +108,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/design_source/ball.sv">
+    <File Path="$PSRCDIR/sources_1/imports/design_source/barrel.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/ball.sv"/>
-        <Attr Name="ImportTime" Val="1697646744"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -130,6 +128,16 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/mb_usb_hdmi_top.sv"/>
         <Attr Name="ImportTime" Val="1698265574"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/ball.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/ball.sv"/>
+        <Attr Name="ImportTime" Val="1697646744"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

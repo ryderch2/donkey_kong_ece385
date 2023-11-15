@@ -15,7 +15,7 @@
 
 
 module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size,
-                       output logic [3:0]  Red, Green, Blue );
+                       output logic [7:0]  Red, Green, Blue );
 
 	 
  /* Old Ball: Generated square box by checking if the current pixel is within a square of length
@@ -32,37 +32,47 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
      of the 120 available multipliers on the chip!  Since the multiplicants are required to be signed,
 	  we have to first cast them from logic to int (signed by default) before they are multiplied). */
 	      
+    logic barrel_on;
     logic shape_on;
-    logic shape2_on;
 
-    logic [10:0] shape_x = 300;
-    logic [10:0] shape_y = 300;
-    logic [10:0] shape_size_x = 10;
-    logic [10:0] shape_size_y = 10;
+    logic [10:0] shape_x = 0;
+    logic [10:0] shape_y = 150;
+    logic [10:0] shape_size_x = 480;
+    logic [10:0] shape_size_y = 20;
     
-    logic [10:0] shape2_x = 400;
-    logic [10:0] shape2_y = 100;
-    logic [10:0] shape2_size_x = 10;
-    logic [10:0] shape2_size_y = 10;
-  
+    logic [10:0] shape2_x = 160;
+    logic [10:0] shape2_y = 300;
+    logic [10:0] shape2_size_x = 480;
+    logic [10:0] shape2_size_y = 20;
+    
+    int DistX, DistY, Size;
+    assign DistX = DrawX - BallX;
+    assign DistY = DrawY - BallY;
+    assign Size = Ball_size;
+    
     always_comb
     begin:Ball_on_proc
-        if (DrawX >= shape_x && DrawX < shape_x + shape_size_x &&
+        if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
+        begin
+            shape_on = 1'b0;
+            barrel_on = 1'b1;
+        end  
+        else if (DrawX >= shape_x && DrawX < shape_x + shape_size_x &&
             DrawY >= shape_y && DrawY < shape_y + shape_size_y)
         begin
             shape_on = 1'b1;
-            shape2_on = 1'b0;
+            barrel_on = 1'b0;
         end
         else if (DrawX >= shape2_x && DrawX < shape2_x + shape2_size_x &&
-                 DrawY >= shape2_y && DrawY < shape2_y + shape2_size_y)
+            DrawY >= shape2_y && DrawY < shape2_y + shape2_size_y)
         begin
-            shape_on = 1'b0;
-            shape2_on = 1'b1;
+            shape_on = 1'b1;
+            barrel_on = 1'b0;
         end
         else
         begin
-            shape_on = 1'b0;
-            shape2_on = 1'b0;
+          barrel_on = 1'b0;
+          shape_on = 1'b0;
         end
      end 
        
@@ -70,18 +80,18 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     begin:RGB_Display
         if ((shape_on == 1'b1)) begin 
             Red = 8'hff;
-            Green = 8'h77;
-            Blue = 8'h00;
+            Green = 8'h14;
+            Blue = 8'h93;
         end
-        else if ((shape2_on == 1'b1)) begin 
-            Red = 8'haa;
-            Green = 8'h00;
-            Blue = 8'h99;
+        else if ((barrel_on == 1'b1)) begin 
+            Red = 8'hff;
+            Green = 8'ha5;
+            Blue = 8'h00;
         end      
         else begin 
-            Red = 8'hff; 
+            Red = 8'h00; 
             Green = 8'h00;
-            Blue = 4'h44;
+            Blue = 4'h00;
         end      
     end 
     
