@@ -53,7 +53,8 @@ module mb_usb_hdmi_top(
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
-    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
+    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig, jumpxsig, jumpysig;
+    logic barrelOn;
 
     logic hsync, vsync, vde;
     logic [7:0] red, green, blue;
@@ -151,7 +152,17 @@ module mb_usb_hdmi_top(
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
         .BarrelX(ballxsig),
         .BarrelY(ballysig),
-        .BarrelS(ballsizesig)
+        .BarrelS(ballsizesig),
+        .BarrelOn(barrelOn)
+    );
+    
+    //Ball Module
+    jumpman jumpman_instance(
+        .Reset(reset_ah),
+        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig)
     );
     
     //Color Mapper Module   
@@ -161,6 +172,9 @@ module mb_usb_hdmi_top(
         .DrawX(drawX),
         .DrawY(drawY),
         .Ball_size(ballsizesig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .BallOn(barrelOn),
         .Red(red),
         .Green(green),
         .Blue(blue)

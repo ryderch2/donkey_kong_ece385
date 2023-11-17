@@ -14,7 +14,8 @@
 //-------------------------------------------------------------------------
 
 
-module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size,
+module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size, JumpX, JumpY,
+                       input logic BallOn,
                        output logic [7:0]  Red, Green, Blue );
 
 	 
@@ -33,17 +34,26 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
 	  we have to first cast them from logic to int (signed by default) before they are multiplied). */
 	      
     logic barrel_on;
-    logic shape_on;
+    logic girder_on;
+    logic jump_on;
 
     logic [10:0] shape_x = 0;
-    logic [10:0] shape_y = 150;
+    logic [10:0] shape_y = 100;
     logic [10:0] shape_size_x = 480;
     logic [10:0] shape_size_y = 20;
     
     logic [10:0] shape2_x = 160;
-    logic [10:0] shape2_y = 300;
+    logic [10:0] shape2_y = 200;
     logic [10:0] shape2_size_x = 480;
     logic [10:0] shape2_size_y = 20;
+    
+    logic [10:0] shape3_x = 0;
+    logic [10:0] shape3_y = 300;
+    logic [10:0] shape3_size_x = 480;
+    logic [10:0] shape3_size_y = 20;
+    
+    logic [10:0] jump_size_x = 16;
+    logic [10:0] jump_size_y = 32;
     
     int DistX, DistY, Size;
     assign DistX = DrawX - BallX;
@@ -52,38 +62,61 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     
     always_comb
     begin:Ball_on_proc
-        if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
+        if (DrawX >= JumpX && DrawX < JumpX + jump_size_x &&
+            DrawY >= JumpY && DrawY < JumpY + jump_size_y)
         begin
-            shape_on = 1'b0;
-            barrel_on = 1'b1;
+            jump_on = 1'b1;
+            girder_on = 1'b0;
+            barrel_on = 1'b0;
         end  
+        else if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b0;
+            barrel_on = 1'b1;
+        end
         else if (DrawX >= shape_x && DrawX < shape_x + shape_size_x &&
             DrawY >= shape_y && DrawY < shape_y + shape_size_y)
         begin
-            shape_on = 1'b1;
+            jump_on = 1'b0;
+            girder_on = 1'b1;
             barrel_on = 1'b0;
         end
         else if (DrawX >= shape2_x && DrawX < shape2_x + shape2_size_x &&
             DrawY >= shape2_y && DrawY < shape2_y + shape2_size_y)
         begin
-            shape_on = 1'b1;
+            jump_on = 1'b0;
+            girder_on = 1'b1;
+            barrel_on = 1'b0;
+        end
+        else if (DrawX >= shape3_x && DrawX < shape3_x + shape3_size_x &&
+            DrawY >= shape3_y && DrawY < shape3_y + shape3_size_y)
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b1;
             barrel_on = 1'b0;
         end
         else
         begin
-          barrel_on = 1'b0;
-          shape_on = 1'b0;
+            jump_on = 1'b0;
+            barrel_on = 1'b0;
+            girder_on = 1'b0;
         end
      end 
        
     always_comb
     begin:RGB_Display
-        if ((shape_on == 1'b1)) begin 
+        if ((girder_on == 1'b1)) begin 
             Red = 8'hff;
             Green = 8'h14;
             Blue = 8'h93;
         end
-        else if ((barrel_on == 1'b1)) begin 
+        else if ((jump_on == 1'b1)) begin 
+            Red = 8'hff;
+            Green = 8'h00;
+            Blue = 8'h00;
+        end 
+        else if ((barrel_on == 1'b1) && (BallOn)) begin 
             Red = 8'hff;
             Green = 8'ha5;
             Blue = 8'h00;
