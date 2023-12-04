@@ -59,6 +59,9 @@ module mb_usb_hdmi_top(
     logic hsync, vsync, vde;
     logic [7:0] red, green, blue;
     logic reset_ah;
+    logic coll0;
+    
+    logic [7:0] jumping;
     
     assign reset_ah = reset_rtl_0;
     
@@ -67,7 +70,7 @@ module mb_usb_hdmi_top(
     HexDriver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+        .in({4'h0, {coll0, coll0, coll0, coll0}, jumping[7:4], jumping[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -160,9 +163,11 @@ module mb_usb_hdmi_top(
     jumpman jumpman_instance(
         .Reset(reset_ah),
         .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .keycode0(keycode0_gpio[7:0]),
+        .keycode1(keycode0_gpio[15:8]),    //Notice: only one keycode connected to ball by default
         .JumpX(jumpxsig),
-        .JumpY(jumpysig)
+        .JumpY(jumpysig),
+        .jumping(jumping)
     );
     
     //Color Mapper Module   
@@ -178,6 +183,16 @@ module mb_usb_hdmi_top(
         .Red(red),
         .Green(green),
         .Blue(blue)
+    );
+    
+    //Collision Module
+    collision collider_0(
+        .frame_clk(vsync),
+        .BallX(ballxsig),
+        .BallY(ballysig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .Collision(coll0)
     );
     
 endmodule

@@ -61,3 +61,105 @@ platform generate -domains
 platform active {mb_usb_hdmi_top}
 platform config -updatehw {C:/Users/ryder/Documents/ECE385/final_project_dk/mb_usb_hdmi_top.xsa}
 platform generate -domains 
+platform create -name {mb_usb_hdmi_top}\
+-hw {C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\mb_usb_hdmi_top.xsa}\
+-out {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385}
+
+platform write
+domain create -name {standalone_microblaze_0} -display-name {standalone_microblaze_0} -os {standalone} -proc {microblaze_0} -runtime {cpp} -arch {32-bit} -support-app {hello_world}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform generate -quick
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top.xsa}
+platform generate -domains 

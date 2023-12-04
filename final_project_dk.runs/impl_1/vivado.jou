@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Nov 16 14:56:00 2023
-# Process ID: 27288
-# Current directory: C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.runs/impl_1
+# Start of session at: Sun Dec  3 18:53:47 2023
+# Process ID: 24860
+# Current directory: C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/impl_1
 # Command line: vivado.exe -log mb_usb_hdmi_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
-# Log file: C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.runs/impl_1/mb_usb_hdmi_top.vdi
-# Journal file: C:/Users/ryder/Documents/ECE385/final_project_dk/final_project_dk.runs/impl_1\vivado.jou
+# Log file: C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/impl_1/mb_usb_hdmi_top.vdi
+# Journal file: C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/impl_1\vivado.jou
 # Running On: LAPTOP-G5II2H4B, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16540 MB
 #-----------------------------------------------------------
 source mb_usb_hdmi_top.tcl -notrace

@@ -36,21 +36,42 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     logic barrel_on;
     logic girder_on;
     logic jump_on;
+    logic ladder_on;
 
     logic [10:0] shape_x = 0;
-    logic [10:0] shape_y = 100;
+    logic [10:0] shape_y = 150;
     logic [10:0] shape_size_x = 480;
-    logic [10:0] shape_size_y = 20;
+    logic [10:0] shape_size_y = 8;
     
     logic [10:0] shape2_x = 160;
-    logic [10:0] shape2_y = 200;
+    logic [10:0] shape2_y = 250;
     logic [10:0] shape2_size_x = 480;
-    logic [10:0] shape2_size_y = 20;
+    logic [10:0] shape2_size_y = 8;
     
-    logic [10:0] shape3_x = 0;
-    logic [10:0] shape3_y = 300;
-    logic [10:0] shape3_size_x = 480;
-    logic [10:0] shape3_size_y = 20;
+    logic [10:0] shape3_x = 20;
+    logic [10:0] shape3_y = 350;
+    logic [10:0] shape3_size_x = 540;
+    logic [10:0] shape3_size_y = 8; 
+    
+    logic [10:0] shape4_x = 0;
+    logic [10:0] shape4_y = 472;
+    logic [10:0] shape4_size_x = 640;
+    logic [10:0] shape4_size_y = 8;
+    
+    logic [9:0] ladder1_X_start = 440;
+    logic [9:0] ladder1_X_end = 460;
+    logic [9:0] ladder1_Y_start = 158;
+    logic [9:0] ladder1_Y_end = 250;
+    
+    logic [9:0] ladder2_X_start = 200;
+    logic [9:0] ladder2_X_end = 220;
+    logic [9:0] ladder2_Y_start = 258;
+    logic [9:0] ladder2_Y_end = 350;
+    
+    logic [9:0] ladder3_X_start = 500;
+    logic [9:0] ladder3_X_end = 520;
+    logic [9:0] ladder3_Y_start = 358;
+    logic [9:0] ladder3_Y_end = 472;
     
     logic [10:0] jump_size_x = 16;
     logic [10:0] jump_size_y = 32;
@@ -68,19 +89,23 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             jump_on = 1'b1;
             girder_on = 1'b0;
             barrel_on = 1'b0;
+            ladder_on = 1'b0;
         end  
         else if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
         begin
             jump_on = 1'b0;
             girder_on = 1'b0;
             barrel_on = 1'b1;
+            ladder_on = 1'b0;
         end
+        
         else if (DrawX >= shape_x && DrawX < shape_x + shape_size_x &&
             DrawY >= shape_y && DrawY < shape_y + shape_size_y)
         begin
             jump_on = 1'b0;
             girder_on = 1'b1;
             barrel_on = 1'b0;
+            ladder_on = 1'b0;
         end
         else if (DrawX >= shape2_x && DrawX < shape2_x + shape2_size_x &&
             DrawY >= shape2_y && DrawY < shape2_y + shape2_size_y)
@@ -88,6 +113,7 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             jump_on = 1'b0;
             girder_on = 1'b1;
             barrel_on = 1'b0;
+            ladder_on = 1'b0;
         end
         else if (DrawX >= shape3_x && DrawX < shape3_x + shape3_size_x &&
             DrawY >= shape3_y && DrawY < shape3_y + shape3_size_y)
@@ -95,12 +121,48 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             jump_on = 1'b0;
             girder_on = 1'b1;
             barrel_on = 1'b0;
+            ladder_on = 1'b0;
         end
+        else if (DrawX >= shape4_x && DrawX < shape4_x + shape4_size_x &&
+            DrawY >= shape4_y && DrawY < shape4_y + shape4_size_y)
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b1;
+            barrel_on = 1'b0;
+            ladder_on = 1'b0;
+        end
+        
+        else if (DrawX >= ladder1_X_start && DrawX < ladder1_X_end &&
+            DrawY >= ladder1_Y_start && DrawY < ladder1_Y_end)
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b0;
+            barrel_on = 1'b0;
+            ladder_on = 1'b1;
+        end
+        else if (DrawX >= ladder2_X_start && DrawX < ladder2_X_end &&
+            DrawY >= ladder2_Y_start && DrawY < ladder2_Y_end)
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b0;
+            barrel_on = 1'b0;
+            ladder_on = 1'b1;
+        end
+        else if (DrawX >= ladder3_X_start && DrawX < ladder3_X_end &&
+            DrawY >= ladder3_Y_start && DrawY < ladder3_Y_end)
+        begin
+            jump_on = 1'b0;
+            girder_on = 1'b0;
+            barrel_on = 1'b0;
+            ladder_on = 1'b1;
+        end
+        
         else
         begin
             jump_on = 1'b0;
             barrel_on = 1'b0;
             girder_on = 1'b0;
+            ladder_on = 1'b0;
         end
      end 
        
@@ -120,6 +182,16 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Red = 8'hff;
             Green = 8'ha5;
             Blue = 8'h00;
+        end
+        else if ((barrel_on == 1'b1) && (!BallOn)) begin 
+            Red = 8'hff;
+            Green = 8'h00;
+            Blue = 8'ha5;
+        end  
+        else if ((ladder_on == 1'b1)) begin 
+            Red = 8'h77;
+            Green = 8'ha5;
+            Blue = 8'h30;
         end      
         else begin 
             Red = 8'h00; 

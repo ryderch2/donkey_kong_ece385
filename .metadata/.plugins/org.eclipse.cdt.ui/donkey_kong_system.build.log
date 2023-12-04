@@ -1,6 +1,0 @@
-14:59:38 **** Incremental Build of configuration Debug for project donkey_kong_system ****
-make all 
-Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
-
-14:59:39 Build Finished (took 130ms)
-
