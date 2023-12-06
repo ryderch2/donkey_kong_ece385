@@ -1,12 +1,12 @@
-21:51:01 **** Incremental Build of configuration Debug for project dk_project ****
+11:51:45 **** Incremental Build of configuration Debug for project dk_project ****
 make all 
 'Building file: ../src/src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb/MAX3421E.o" -IC:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb/MAX3421E.d" -MT"src/src/lw_usb/MAX3421E.o" -o "src/src/lw_usb/MAX3421E.o" "../src/src/lw_usb/MAX3421E.c"
-In file included from C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb/MAX3421E.o" -IC:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb/MAX3421E.d" -MT"src/src/lw_usb/MAX3421E.o" -o "src/src/lw_usb/MAX3421E.o" "../src/src/lw_usb/MAX3421E.c"
+In file included from C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
                  from ../src/src/lw_usb/MAX3421E.c:15:
 ../src/src/lw_usb/MAX3421E.c: In function 'SPI_init':
-C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:44:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:44:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
    44 | #define XST_DEVICE_NOT_FOUND            2L
       |                                         ^~
 ../src/src/lw_usb/MAX3421E.c:39:24: note: in expansion of macro 'XST_DEVICE_NOT_FOUND'
@@ -15,9 +15,9 @@ C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb
 ../src/src/lw_usb/MAX3421E.c:33:6: note: declared here
    33 | void SPI_init() {
       |      ^~~~~~~~
-In file included from C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
+In file included from C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xspi.h:303,
                  from ../src/src/lw_usb/MAX3421E.c:15:
-C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:43:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
+C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include/xstatus.h:43:41: warning: 'return' with a value, in function returning void [-Wreturn-type]
    43 | #define XST_FAILURE                     1L
       |                                         ^~
 ../src/src/lw_usb/MAX3421E.c:45:24: note: in expansion of macro 'XST_FAILURE'
@@ -38,7 +38,7 @@ C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb
 ' '
 'Building file: ../src/src/lw_usb/transfer.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb/transfer.o" -IC:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb/transfer.d" -MT"src/src/lw_usb/transfer.o" -o "src/src/lw_usb/transfer.o" "../src/src/lw_usb/transfer.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb/transfer.o" -IC:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb/transfer.d" -MT"src/src/lw_usb/transfer.o" -o "src/src/lw_usb/transfer.o" "../src/src/lw_usb/transfer.c"
 ../src/src/lw_usb/transfer.c:14:1: warning: braces around scalar initializer
    14 | EP_RECORD dev0ep = {{ 0 }};         //Endpoint data structure for uninitialized device during enumeration
       | ^~~~~~~~~
@@ -54,17 +54,17 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb/transfer.o" -IC:/U
 ' '
 'Building file: ../src/src/lw_usb_main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb_main.o" -IC:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb_main.d" -MT"src/src/lw_usb_main.o" -o "src/src/lw_usb_main.o" "../src/src/lw_usb_main.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/lw_usb_main.o" -IC:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/lw_usb_main.d" -MT"src/src/lw_usb_main.o" -o "src/src/lw_usb_main.o" "../src/src/lw_usb_main.c"
 'Finished building: ../src/src/lw_usb_main.c'
 ' '
 'Building file: ../src/src/platform.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/platform.o" -IC:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/platform.d" -MT"src/src/platform.o" -o "src/src/platform.o" "../src/src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/src/platform.o" -IC:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/platform.d" -MT"src/src/platform.o" -o "src/src/platform.o" "../src/src/platform.c"
 'Finished building: ../src/src/platform.c'
 ' '
 'Building target: dk_project.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "dk_project.elf"  ./src/src/lw_usb/HID.o ./src/src/lw_usb/MAX3421E.o ./src/src/lw_usb/transfer.o  ./src/src/lw_usb_main.o ./src/src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "dk_project.elf"  ./src/src/lw_usb/HID.o ./src/src/lw_usb/MAX3421E.o ./src/src/lw_usb/transfer.o  ./src/src/lw_usb_main.o ./src/src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: dk_project.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
@@ -74,5 +74,5 @@ mb-size dk_project.elf  |tee "dk_project.elf.size"
 'Finished building: dk_project.elf.size'
 ' '
 
-21:51:03 Build Finished (took 1s.543ms)
+11:51:46 Build Finished (took 1s.149ms)
 

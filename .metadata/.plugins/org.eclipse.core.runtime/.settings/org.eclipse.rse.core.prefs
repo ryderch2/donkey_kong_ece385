@@ -1,4 +1,3 @@
-activeuserprofiles=LAPTOP-G5II2H4B;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=ryder
-useridperkey=LAPTOP-G5II2H4B.Local\=ryder;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=sam
+useridperkey=pinnochio.Local\=sam;

@@ -15,8 +15,9 @@
 
 
 module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size, JumpX, JumpY,
-                       input logic BallOn,
-                       output logic [7:0]  Red, Green, Blue );
+                       input logic BallOn, Jumping, clk,
+                       output logic [7:0]  Red, Green, Blue
+                       );
 
 	 
  /* Old Ball: Generated square box by checking if the current pixel is within a square of length
@@ -75,6 +76,8 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     
     logic [10:0] jump_size_x = 16;
     logic [10:0] jump_size_y = 32;
+    
+    logic [7:0] barrelgreen;
     
     int DistX, DistY, Size;
     assign DistX = DrawX - BallX;
@@ -173,15 +176,22 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Green = 8'h14;
             Blue = 8'h93;
         end
-        else if ((jump_on == 1'b1)) begin 
+        else if ((jump_on == 1'b1) && (!Jumping)) begin 
             Red = 8'hff;
             Green = 8'h00;
             Blue = 8'h00;
         end 
-        else if ((barrel_on == 1'b1) && (BallOn)) begin 
+        else if ((jump_on == 1'b1) && (!Jumping)) begin 
             Red = 8'hff;
-            Green = 8'ha5;
-            Blue = 8'h00;
+            Green = 8'h00;
+            Blue = 8'h11;
+        end 
+        else if ((barrel_on == 1'b1) && (BallOn)) begin 
+            Red = 8'h10;
+//            Green = 8'ha5;
+            barrelg mygreenbarrel (.read_address(6), .Clk(clk), .data_Out(barrelgreen));
+            Green = barrelgreen;
+            Blue = 8'h10;
         end
         else if ((barrel_on == 1'b1) && (!BallOn)) begin 
             Red = 8'hff;

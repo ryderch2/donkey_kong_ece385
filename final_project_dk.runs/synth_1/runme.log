@@ -11,12 +11,12 @@
 
 source mb_usb_hdmi_top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ryder/Documents/ECE385/RD_hdmi_ip2020/hdmi_tx_1.0'.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/ryder/Documents/ECE385/Documents/ECE385/RD_hdmi_ip2020'; Can't find the specified path.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/sam/RD_hdmi_ip2020/hdmi_tx_1.0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sam/Documents/ECE385/RD_hdmi_ip2020'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top mb_usb_hdmi_top -part xc7s50csga324-1
 Starting synth_design
@@ -27,128 +27,238 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4432
+INFO: [Synth 8-7075] Helper process launched with PID 9884
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'direction', assumed default net type 'wire' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:57]
+INFO: [Synth 8-11241] undeclared symbol 'direction', assumed default net type 'wire' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:57]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1217.762 ; gain = 409.504
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1217.172 ; gain = 407.812
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:24]
-INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_xbar_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_dlmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_ilmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_lmb_bram_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/mb_block_axi_timer_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_0' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:114]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:114]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-33728-LAPTOP-G5II2H4B/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'dk_game' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'dk_game' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'barrel' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'barrel' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'jumpman' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:17]
-WARNING: [Synth 8-6090] variable 'jumping' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:173]
-INFO: [Synth 8-6155] done synthesizing module 'jumpman' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv:17]
-INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'collision' [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/collision.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'collision' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/collision.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:24]
-WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:48]
-WARNING: [Synth 8-7137] Register curr_state_reg in module dk_game has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mb_block' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/mb_block_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_0' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_0' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_0/synth/mb_block_xlconcat_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:114]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:114]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/.Xil/Vivado-3024-pinnochio/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dk_game' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dk_game' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'barrel' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'barrel' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'jumpman' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:17]
+WARNING: [Synth 8-6090] variable 'climbing' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:145]
+INFO: [Synth 8-6155] done synthesizing module 'jumpman' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'color_mapper' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'barrelg' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:28]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'sprites/barrel.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'barrelg' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'collision' [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/collision.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'collision' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/collision.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:24]
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:48]
+WARNING: [Synth 8-7137] Register curr_state_reg in module dk_game has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv:34]
+WARNING: [Synth 8-7137] Register Jumping_reg in module jumpman has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv:129]
+WARNING: [Synth 8-3848] Net barrelgreen in module/entity color_mapper does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv:80]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+WARNING: [Synth 8-3848] Net mem in module/entity barrelg does not have driver. [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrelg.sv:37]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port clk in module color_mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port keycode[7] in module barrel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port keycode[6] in module barrel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port keycode[5] in module barrel is either unconnected or has no load
@@ -248,117 +358,116 @@ WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1326.816 ; gain = 518.559
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.098 ; gain = 518.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1326.816 ; gain = 518.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.098 ; gain = 518.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1326.816 ; gain = 518.559
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.098 ; gain = 518.738
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1326.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1328.098 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
-WARNING: [Constraints 18-619] A clock with name 'Clk' already exists, overwriting the previous clock with the same name. [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
-Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
-Finished Parsing XDC File [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
-Parsing XDC File [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+WARNING: [Constraints 18-619] A clock with name 'Clk' already exists, overwriting the previous clock with the same name. [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Finished Parsing XDC File [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Parsing XDC File [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_100' completely overrides clock 'Clk'.
-New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
-Previous: create_clock -period 10.000 [get_ports Clk], [c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
+Previous: create_clock -period 10.000 [get_ports Clk], [c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mb_usb_hdmi_top_propImpl.xdc].
+Finished Parsing XDC File [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sam/donkey_kong_ece385/final_project_dk.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mb_usb_hdmi_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mb_usb_hdmi_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1428.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1385.605 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1428.930 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1385.605 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 1).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 9).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 11).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 12).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 13).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 14).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 15).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  c:/Users/sam/donkey_kong_ece385/final_project_dk.gen/sources_1/ip/hdmi_tx_0_1/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 16).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
@@ -382,10 +491,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/xlconcat_0. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -399,14 +508,14 @@ Detailed RTL Component Info :
 	   3 Input   11 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 15    
 	   3 Input   10 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
 	               10 Bit    Registers := 10    
 	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
 +---Multipliers : 
 	              32x32  Multipliers := 2     
 +---Muxes : 
@@ -414,14 +523,14 @@ Detailed RTL Component Info :
 	   7 Input   10 Bit        Muxes := 1     
 	   4 Input   10 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 2     
 	   6 Input    8 Bit        Muxes := 3     
 	   5 Input    4 Bit        Muxes := 2     
 	   2 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 2     
 	   5 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 19    
+	   2 Input    1 Bit        Muxes := 21    
 	   6 Input    1 Bit        Muxes := 1     
 	   4 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
@@ -467,7 +576,7 @@ DSP Report: Generating DSP girder_on3, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator girder_on3 is absorbed into DSP girder_on3.
 DSP Report: operator girder_on3 is absorbed into DSP girder_on3.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -497,19 +606,19 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1385.605 ; gain = 576.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1407.957 ; gain = 598.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1408.645 ; gain = 599.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -527,37 +636,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -626,41 +735,41 @@ Report Cell Usage:
 |20    |BUFG                           |     1|
 |21    |CARRY4                         |    78|
 |22    |DSP48E1                        |     7|
-|23    |LUT1                           |     8|
-|24    |LUT2                           |   207|
-|25    |LUT3                           |    76|
-|26    |LUT4                           |   120|
-|27    |LUT5                           |    46|
-|28    |LUT6                           |   150|
-|29    |FDCE                           |    66|
+|23    |LUT1                           |     9|
+|24    |LUT2                           |   208|
+|25    |LUT3                           |    66|
+|26    |LUT4                           |   126|
+|27    |LUT5                           |    42|
+|28    |LUT6                           |   133|
+|29    |FDCE                           |    62|
 |30    |FDPE                           |    18|
-|31    |FDRE                           |    35|
+|31    |FDRE                           |    36|
 |32    |IBUF                           |     4|
 |33    |OBUF                           |    29|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1412.418 ; gain = 603.059
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1428.996 ; gain = 518.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1428.996 ; gain = 620.738
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1412.418 ; gain = 545.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1412.418 ; gain = 603.059
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1429.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1424.465 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 85 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1433.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1428.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 36f9a0f5
+Synth Design complete, checksum: 8c667c95
 INFO: [Common 17-83] Releasing license: Synthesis
-117 Infos, 134 Warnings, 1 Critical Warnings and 0 Errors encountered.
+120 Infos, 236 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1433.328 ; gain = 1000.012
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1428.125 ; gain = 995.172
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sam/donkey_kong_ece385/final_project_dk.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 21:47:14 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  6 13:25:44 2023...

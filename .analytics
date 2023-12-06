@@ -239,3 +239,24 @@ timestamp=[2023-12-04 21:45:45], mode=BUILD, duration=0:00:00.137, duration_ms=1
 timestamp=[2023-12-04 21:51:01], mode=PLATFORM_GENERATION, duration=0:00:07.692, duration_ms=7692, data={name=mb_usb_hdmi_top}
 timestamp=[2023-12-04 21:51:03], mode=BUILD, duration=0:00:01.553, duration_ms=1553, data={name=dk_project, configuration=Debug, clean_build=false}
 timestamp=[2023-12-04 21:51:03], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=dk_project_system, configuration=Debug, clean_build=false}
+timestamp=[2023-12-06 11:23:40], mode=WORKBENCH_START, duration=0:00:04.202, duration_ms=4202, data={}
+timestamp=[2023-12-06 11:23:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.260, duration_ms=260, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-12-06 11:23:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.087, duration_ms=87, data={}
+timestamp=[2023-12-06 11:25:19], mode=WORKBENCH_START, duration=0:00:04.105, duration_ms=4105, data={}
+timestamp=[2023-12-06 11:25:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.382, duration_ms=382, data={editors_count=2, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2023-12-06 11:25:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.030, duration_ms=30, data={}
+timestamp=[2023-12-06 11:28:17], mode=WORKBENCH_START, duration=0:00:04.785, duration_ms=4785, data={}
+timestamp=[2023-12-06 11:28:18], mode=WORKBENCH_UI_INIT, duration=0:00:00.425, duration_ms=425, data={editors_count=3, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2023-12-06 11:28:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.041, duration_ms=41, data={}
+timestamp=[2023-12-06 11:28:42], mode=WORKBENCH_START, duration=0:00:04.255, duration_ms=4255, data={}
+timestamp=[2023-12-06 11:28:42], mode=WORKBENCH_UI_INIT, duration=0:00:00.422, duration_ms=422, data={editors_count=3, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2023-12-06 11:28:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.037, duration_ms=37, data={}
+timestamp=[2023-12-06 11:32:29], mode=WORKBENCH_START, duration=0:00:04.298, duration_ms=4298, data={}
+timestamp=[2023-12-06 11:32:29], mode=WORKBENCH_UI_INIT, duration=0:00:00.431, duration_ms=431, data={editors_count=5, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2023-12-06 11:32:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.022, duration_ms=22, data={}
+timestamp=[2023-12-06 11:34:10], mode=PLATFORM_GENERATION, duration=0:00:05.454, duration_ms=5454, data={name=mb_usb_hdmi_top}
+timestamp=[2023-12-06 11:34:12], mode=BUILD, duration=0:00:01.459, duration_ms=1459, data={name=dk_project, configuration=Debug, clean_build=false}
+timestamp=[2023-12-06 11:34:13], mode=BUILD, duration=0:00:00.113, duration_ms=113, data={name=dk_project_system, configuration=Debug, clean_build=false}
+timestamp=[2023-12-06 11:51:44], mode=PLATFORM_GENERATION, duration=0:00:05.051, duration_ms=5051, data={name=mb_usb_hdmi_top}
+timestamp=[2023-12-06 11:51:46], mode=BUILD, duration=0:00:01.159, duration_ms=1159, data={name=dk_project, configuration=Debug, clean_build=false}
+timestamp=[2023-12-06 11:51:46], mode=BUILD, duration=0:00:00.158, duration_ms=158, data={name=dk_project_system, configuration=Debug, clean_build=false}
