@@ -57,7 +57,7 @@ module  jumpman ( input logic Reset, frame_clk,
     parameter [9:0] JumpSY = 32;  // default Jump size'
     
     logic climbing;
-    logic jumping;
+    logic [7:0] jumping;
     
    
     always_ff @ (posedge frame_clk or posedge Reset) //make sure the frame clock is instantiated correctly
@@ -139,8 +139,10 @@ module  jumpman ( input logic Reset, frame_clk,
 				end  
 			
 			    if (jumping != 0 && keycode0 != 8'h2C && keycode1 != 8'h2C)
+			    begin
 			        Jumping <= 1;
 			        jumping <= jumping - 1;
+			    end
 			    if (climbing != 0 && keycode0 != 8'h1A && keycode1 != 8'h1A && keycode0 != 8'h16 && keycode1 != 8'h16)
 			        climbing <= 8'h00;
 			       

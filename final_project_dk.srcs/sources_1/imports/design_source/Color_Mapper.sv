@@ -15,11 +15,7 @@
 
 
 module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size, JumpX, JumpY,
-<<<<<<< HEAD
                        input logic BallOn, Jumping, Clk,
-=======
-                       input logic BallOn, Jumping, clk,
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
                        output logic [7:0]  Red, Green, Blue
                        );
 
@@ -81,13 +77,9 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     logic [10:0] jump_size_x = 16;
     logic [10:0] jump_size_y = 32;
     
-<<<<<<< HEAD
     logic [23:0] barrel_color;
     
     logic [18:0] barrel_address;
-=======
-    logic [7:0] barrelgreen;
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
     
     int DistX, DistY, Size;
     assign DistX = DrawX - BallX;
@@ -101,73 +93,46 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             DrawY >= JumpY && DrawY < JumpY + jump_size_y)
         begin
             jump_on = 1'b1;
-            girder_on = 1'b0;
-            barrel_on = 1'b0;
-            ladder_on = 1'b0;
         end  
         else if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
         begin
-            jump_on = 1'b0;
-            girder_on = 1'b0;
             barrel_on = 1'b1;
-            ladder_on = 1'b0;
         end
         
         else if (DrawX >= shape_x && DrawX < shape_x + shape_size_x &&
             DrawY >= shape_y && DrawY < shape_y + shape_size_y)
         begin
-            jump_on = 1'b0;
             girder_on = 1'b1;
-            barrel_on = 1'b0;
-            ladder_on = 1'b0;
         end
         else if (DrawX >= shape2_x && DrawX < shape2_x + shape2_size_x &&
             DrawY >= shape2_y && DrawY < shape2_y + shape2_size_y)
         begin
-            jump_on = 1'b0;
             girder_on = 1'b1;
-            barrel_on = 1'b0;
-            ladder_on = 1'b0;
         end
         else if (DrawX >= shape3_x && DrawX < shape3_x + shape3_size_x &&
             DrawY >= shape3_y && DrawY < shape3_y + shape3_size_y)
         begin
-            jump_on = 1'b0;
             girder_on = 1'b1;
-            barrel_on = 1'b0;
-            ladder_on = 1'b0;
         end
         else if (DrawX >= shape4_x && DrawX < shape4_x + shape4_size_x &&
             DrawY >= shape4_y && DrawY < shape4_y + shape4_size_y)
         begin
-            jump_on = 1'b0;
             girder_on = 1'b1;
-            barrel_on = 1'b0;
-            ladder_on = 1'b0;
         end
         
         else if (DrawX >= ladder1_X_start && DrawX < ladder1_X_end &&
             DrawY >= ladder1_Y_start && DrawY < ladder1_Y_end)
         begin
-            jump_on = 1'b0;
-            girder_on = 1'b0;
-            barrel_on = 1'b0;
             ladder_on = 1'b1;
         end
         else if (DrawX >= ladder2_X_start && DrawX < ladder2_X_end &&
             DrawY >= ladder2_Y_start && DrawY < ladder2_Y_end)
         begin
-            jump_on = 1'b0;
-            girder_on = 1'b0;
-            barrel_on = 1'b0;
             ladder_on = 1'b1;
         end
         else if (DrawX >= ladder3_X_start && DrawX < ladder3_X_end &&
             DrawY >= ladder3_Y_start && DrawY < ladder3_Y_end)
         begin
-            jump_on = 1'b0;
-            girder_on = 1'b0;
-            barrel_on = 1'b0;
             ladder_on = 1'b1;
         end
         
@@ -182,37 +147,21 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
        
     always_comb
     begin:RGB_Display
-        if ((girder_on == 1'b1)) begin 
-            Red = 8'hff;
-            Green = 8'h14;
-            Blue = 8'h93;
-        end
-        else if ((jump_on == 1'b1) && (!Jumping)) begin 
+
+        if ((jump_on == 1'b1) && (!Jumping)) begin 
             Red = 8'hff;
             Green = 8'h00;
             Blue = 8'h00;
         end 
-<<<<<<< HEAD
         else if ((jump_on == 1'b1) && (Jumping)) begin 
-=======
-        else if ((jump_on == 1'b1) && (!Jumping)) begin 
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
             Red = 8'hff;
             Green = 8'h00;
             Blue = 8'h11;
         end 
-        else if ((barrel_on == 1'b1) && (BallOn)) begin 
-<<<<<<< HEAD
+        else if ((barrel_on == 1'b1) && (BallOn) && (barrel_color != 24'b0)) begin
             Red = barrel_color[7:0];
             Green = barrel_color[15:8];
             Blue = barrel_color[23:16];
-=======
-            Red = 8'h10;
-//            Green = 8'ha5;
-            barrelg mygreenbarrel (.read_address(6), .Clk(clk), .data_Out(barrelgreen));
-            Green = barrelgreen;
-            Blue = 8'h10;
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
         end
         else if ((barrel_on == 1'b1) && (!BallOn)) begin 
             Red = 8'hff;
@@ -223,6 +172,11 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Red = 8'h77;
             Green = 8'ha5;
             Blue = 8'h30;
+        end
+        else if ((girder_on == 1'b1)) begin 
+            Red = 8'hff;
+            Green = 8'h14;
+            Blue = 8'h93;
         end      
         else begin 
             Red = 8'h00; 

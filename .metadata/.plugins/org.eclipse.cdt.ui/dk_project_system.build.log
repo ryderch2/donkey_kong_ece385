@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-14:47:09 **** Build of configuration Debug for project dk_project_system ****
+16:50:16 **** Incremental Build of configuration Debug for project dk_project_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-14:47:10 Build Finished (took 105ms)
-=======
-11:51:46 **** Incremental Build of configuration Debug for project dk_project_system ****
-make all 
-Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
-
-11:51:46 Build Finished (took 149ms)
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
+16:50:16 Build Finished (took 100ms)
 

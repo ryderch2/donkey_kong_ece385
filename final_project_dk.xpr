@@ -98,26 +98,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0.xci">
-          <Proxy FileSetName="mb_block_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xci">
-          <Proxy FileSetName="mb_block_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0.xci">
           <Proxy FileSetName="mb_block_axi_quad_spi_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="mb_block_microblaze_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0.xci">
-          <Proxy FileSetName="mb_block_ilmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="mb_block_ilmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_mdm_1_0/mb_block_mdm_1_0.xci">
           <Proxy FileSetName="mb_block_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="mb_block_ilmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0.xci">
           <Proxy FileSetName="mb_block_rst_clk_wiz_1_100M_0"/>
@@ -125,30 +113,51 @@
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xci">
           <Proxy FileSetName="mb_block_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1.xci">
-          <Proxy FileSetName="mb_block_axi_gpio_0_1"/>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0.xci">
+          <Proxy FileSetName="mb_block_axi_timer_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2.xci">
-          <Proxy FileSetName="mb_block_axi_gpio_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="mb_block_dlmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0.xci">
+          <Proxy FileSetName="mb_block_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_xbar_0/mb_block_xbar_0.xci">
           <Proxy FileSetName="mb_block_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0.xci">
-          <Proxy FileSetName="mb_block_dlmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0.xci">
+          <Proxy FileSetName="mb_block_microblaze_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0.xci">
           <Proxy FileSetName="mb_block_lmb_bram_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0.xci">
+          <Proxy FileSetName="mb_block_dlmb_v10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="mb_block_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1.xci">
+          <Proxy FileSetName="mb_block_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="mb_block_dlmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2.xci">
+          <Proxy FileSetName="mb_block_axi_gpio_0_2"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.xci">
           <Proxy FileSetName="mb_block_axi_gpio_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0.xci">
-          <Proxy FileSetName="mb_block_axi_timer_0_0"/>
+        <CompFileExtendedInfo CompFileName="mb_block.bd" FileRelPathName="ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0.xci">
+          <Proxy FileSetName="mb_block_ilmb_v10_0"/>
         </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/design_source/Color_Mapper.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/Color_Mapper.sv"/>
+          <Attr Name="ImportTime" Val="1698268960"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/design_source/VGA_controller.sv">
         <FileInfo>
@@ -196,28 +205,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/sprite_reader.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/design_source/mb_usb_hdmi_top.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/mb_usb_hdmi_top.sv"/>
           <Attr Name="ImportTime" Val="1698265574"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/design_source/Color_Mapper.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/Color_Mapper.sv"/>
-          <Attr Name="ImportTime" Val="1698268960"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/sprite_reader.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -1,209 +1,31 @@
-11:23:38 DEBUG : Logs will be stored at 'C:/Users/sam/donkey_kong_ece385/IDE.log'.
-11:23:41 INFO  : Platform repository initialization has completed.
-11:23:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sam\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-11:23:41 INFO  : Registering command handlers for Vitis TCF services
-11:23:44 INFO  : XSCT server has started successfully.
-11:23:44 INFO  : plnx-install-location is set to ''
-11:23:44 INFO  : Successfully done setting XSCT server connection channel  
-11:23:46 INFO  : Successfully done setting workspace for the tool. 
-11:23:46 INFO  : Successfully done query RDI_DATADIR 
-11:25:19 DEBUG : Logs will be stored at 'C:/Users/sam/donkey_kong_ece385/IDE.log'.
-11:25:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sam\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-11:25:20 INFO  : Platform repository initialization has completed.
-11:25:20 INFO  : Registering command handlers for Vitis TCF services
-11:25:22 INFO  : XSCT server has started successfully.
-11:25:22 INFO  : plnx-install-location is set to ''
-11:25:22 INFO  : Successfully done setting XSCT server connection channel  
-11:25:22 INFO  : Successfully done query RDI_DATADIR 
-11:25:22 INFO  : Successfully done setting workspace for the tool. 
-11:28:16 DEBUG : Logs will be stored at 'C:/Users/sam/donkey_kong_ece385/IDE.log'.
-11:28:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sam\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-11:28:18 INFO  : Platform repository initialization has completed.
-11:28:18 INFO  : Registering command handlers for Vitis TCF services
-11:28:21 INFO  : XSCT server has started successfully.
-11:28:21 INFO  : plnx-install-location is set to ''
-11:28:23 INFO  : Successfully done setting XSCT server connection channel  
-11:28:23 INFO  : Successfully done query RDI_DATADIR 
-11:28:23 INFO  : Successfully done setting workspace for the tool. 
-11:28:41 DEBUG : Logs will be stored at 'C:/Users/sam/donkey_kong_ece385/IDE.log'.
-11:28:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sam\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-11:28:43 INFO  : Platform repository initialization has completed.
-11:28:43 INFO  : Registering command handlers for Vitis TCF services
-11:28:45 INFO  : XSCT server has started successfully.
-11:28:45 INFO  : Successfully done setting XSCT server connection channel  
-11:28:45 INFO  : plnx-install-location is set to ''
-11:28:45 INFO  : Successfully done setting workspace for the tool. 
-11:28:45 INFO  : Successfully done query RDI_DATADIR 
-11:32:27 DEBUG : Logs will be stored at 'C:/Users/sam/donkey_kong_ece385/IDE.log'.
-11:32:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sam\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-11:32:29 INFO  : Platform repository initialization has completed.
-11:32:29 INFO  : Registering command handlers for Vitis TCF services
-11:32:31 INFO  : XSCT server has started successfully.
-11:32:31 INFO  : plnx-install-location is set to ''
-11:32:31 INFO  : Successfully done setting XSCT server connection channel  
-11:32:31 INFO  : Successfully done query RDI_DATADIR 
-11:32:31 INFO  : Successfully done setting workspace for the tool. 
-11:32:50 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
-11:32:53 INFO  : [Import] Updating active build configuration of the system project 'dk_project_system' to 'Debug' after the import.
-11:33:57 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
-11:34:10 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
-11:34:10 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
-11:34:10 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
-11:34:12 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
-11:34:12 INFO  : The file 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
-11:34:12 INFO  : The file 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
-11:34:12 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
-11:34:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-11:34:53 INFO  : Jtag cable 'RealDigital Boo 887429230101A' is selected.
-11:34:53 INFO  : 'jtag frequency' command is executed.
-11:34:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
-11:34:55 INFO  : Device configured successfully with "C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
-11:34:55 INFO  : Context for processor 'microblaze_0' is selected.
-11:34:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
-11:34:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
-11:34:55 INFO  : Context for processor 'microblaze_0' is selected.
-11:34:55 INFO  : System reset is completed.
-11:34:58 INFO  : 'after 3000' command is executed.
-11:34:59 INFO  : Context for processor 'microblaze_0' is selected.
-11:34:59 INFO  : The application 'C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
-11:34:59 INFO  : ----------------XSDB Script----------------
-connect -url tcp:127.0.0.1:3121
-targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
-fpga -file C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-loadhw -hw C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
-configparams mdm-detect-bscan-mask 2
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-rst -system
-after 3000
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-dow C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf
-----------------End of Script----------------
-
-11:34:59 INFO  : Context for processor 'microblaze_0' is selected.
-11:34:59 INFO  : 'con' command is executed.
-11:34:59 INFO  : ----------------XSDB Script (After Launch)----------------
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-con
-----------------End of Script----------------
-
-11:34:59 INFO  : Launch script is exported to file 'C:\Users\sam\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
-11:39:48 INFO  : Disconnected from the channel tcfchan#2.
-11:39:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-11:39:49 INFO  : Jtag cable 'RealDigital Boo 887429230101A' is selected.
-11:39:49 INFO  : 'jtag frequency' command is executed.
-11:39:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
-11:39:50 INFO  : Device configured successfully with "C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
-11:39:50 INFO  : Context for processor 'microblaze_0' is selected.
-11:39:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
-11:39:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
-11:39:50 INFO  : Context for processor 'microblaze_0' is selected.
-11:39:51 INFO  : System reset is completed.
-11:39:54 INFO  : 'after 3000' command is executed.
-11:39:54 INFO  : Context for processor 'microblaze_0' is selected.
-11:39:54 INFO  : The application 'C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
-11:39:54 INFO  : ----------------XSDB Script----------------
-connect -url tcp:127.0.0.1:3121
-targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
-fpga -file C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-loadhw -hw C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
-configparams mdm-detect-bscan-mask 2
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-rst -system
-after 3000
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-dow C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf
-----------------End of Script----------------
-
-11:39:54 INFO  : Context for processor 'microblaze_0' is selected.
-11:39:54 INFO  : 'con' command is executed.
-11:39:54 INFO  : ----------------XSDB Script (After Launch)----------------
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-con
-----------------End of Script----------------
-
-11:39:54 INFO  : Launch script is exported to file 'C:\Users\sam\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
-11:51:32 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
-11:51:44 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
-11:51:44 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
-11:51:44 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
-11:51:46 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
-11:51:46 INFO  : The file 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
-11:51:46 INFO  : The file 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
-11:51:46 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sam\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
-11:51:52 INFO  : Disconnected from the channel tcfchan#3.
-11:51:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-11:51:53 INFO  : Jtag cable 'RealDigital Boo 887429230101A' is selected.
-11:51:53 INFO  : 'jtag frequency' command is executed.
-11:51:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
-11:51:55 INFO  : Device configured successfully with "C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
-11:51:55 INFO  : Context for processor 'microblaze_0' is selected.
-11:51:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
-11:51:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
-11:51:55 INFO  : Context for processor 'microblaze_0' is selected.
-11:51:55 INFO  : System reset is completed.
-11:51:58 INFO  : 'after 3000' command is executed.
-11:51:58 INFO  : Context for processor 'microblaze_0' is selected.
-11:51:58 INFO  : The application 'C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
-11:51:58 INFO  : ----------------XSDB Script----------------
-connect -url tcp:127.0.0.1:3121
-targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230101A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
-fpga -file C:/Users/sam/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-loadhw -hw C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
-configparams mdm-detect-bscan-mask 2
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-rst -system
-after 3000
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-dow C:/Users/sam/donkey_kong_ece385/dk_project/Debug/dk_project.elf
-----------------End of Script----------------
-
-11:51:58 INFO  : Context for processor 'microblaze_0' is selected.
-11:51:58 INFO  : 'con' command is executed.
-11:51:58 INFO  : ----------------XSDB Script (After Launch)----------------
-targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-con
-----------------End of Script----------------
-
-11:51:58 INFO  : Launch script is exported to file 'C:\Users\sam\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
-<<<<<<< HEAD
-13:51:34 DEBUG : Logs will be stored at 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/IDE.log'.
-13:51:35 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\temp_xsdb_launch_script.tcl
-13:51:40 INFO  : XSCT server has started successfully.
-13:51:40 INFO  : Successfully done setting XSCT server connection channel  
-13:51:40 INFO  : plnx-install-location is set to ''
-13:51:40 INFO  : Successfully done setting workspace for the tool. 
-13:51:40 ERROR : Error encountered while initializing user repository paths
-Reason: No Platforms Found.
-
-
-13:51:40 INFO  : Platform repository initialization has completed.
-13:51:42 INFO  : Registering command handlers for Vitis TCF services
-13:51:44 INFO  : Successfully done query RDI_DATADIR 
-14:46:54 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
-14:47:07 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
-14:47:07 INFO  : Result from executing command 'getPlatforms': 
-14:47:07 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
-14:47:09 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
-14:47:09 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
-14:47:09 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
-14:47:09 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
-14:47:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-14:47:32 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
-14:47:32 INFO  : 'jtag frequency' command is executed.
-14:47:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
-14:47:34 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
-14:47:34 INFO  : Context for processor 'microblaze_0' is selected.
-14:47:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
-14:47:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
-14:47:34 INFO  : Context for processor 'microblaze_0' is selected.
-14:47:34 INFO  : System reset is completed.
-14:47:37 INFO  : 'after 3000' command is executed.
-14:47:37 INFO  : Context for processor 'microblaze_0' is selected.
-14:47:37 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
-14:47:37 INFO  : ----------------XSDB Script----------------
+16:24:10 DEBUG : Logs will be stored at 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/IDE.log'.
+16:24:12 INFO  : Platform repository initialization has completed.
+16:24:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\temp_xsdb_launch_script.tcl
+16:24:12 INFO  : Registering command handlers for Vitis TCF services
+16:24:14 INFO  : XSCT server has started successfully.
+16:24:17 INFO  : plnx-install-location is set to ''
+16:24:17 INFO  : Successfully done setting XSCT server connection channel  
+16:24:17 INFO  : Successfully done query RDI_DATADIR 
+16:24:17 INFO  : Successfully done setting workspace for the tool. 
+16:24:30 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+16:24:32 INFO  : [Import] Updating active build configuration of the system project 'dk_project_system' to 'Debug' after the import.
+16:24:38 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:24:38 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:24:38 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:24:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:24:55 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:24:55 INFO  : 'jtag frequency' command is executed.
+16:24:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:24:56 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:24:56 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:24:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:24:56 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:56 INFO  : System reset is completed.
+16:24:59 INFO  : 'after 3000' command is executed.
+16:24:59 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:00 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:25:00 INFO  : ----------------XSDB Script----------------
 connect -url tcp:127.0.0.1:3121
 targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
 fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
@@ -217,13 +39,267 @@ targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
 dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
 ----------------End of Script----------------
 
-14:47:37 INFO  : Context for processor 'microblaze_0' is selected.
-14:47:37 INFO  : 'con' command is executed.
-14:47:37 INFO  : ----------------XSDB Script (After Launch)----------------
+16:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:00 INFO  : 'con' command is executed.
+16:25:00 INFO  : ----------------XSDB Script (After Launch)----------------
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
 con
 ----------------End of Script----------------
 
-14:47:37 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
-=======
->>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
+16:25:00 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:25:06 INFO  : Disconnected from the channel tcfchan#2.
+16:25:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:25:06 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:25:06 INFO  : 'jtag frequency' command is executed.
+16:25:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:25:08 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:25:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:08 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:25:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:25:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:08 INFO  : System reset is completed.
+16:25:11 INFO  : 'after 3000' command is executed.
+16:25:11 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:11 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:25:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:25:11 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:11 INFO  : 'con' command is executed.
+16:25:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:25:11 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:25:43 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:26:06 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:26:06 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:26:06 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:26:08 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:26:08 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:26:08 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:26:08 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
+16:26:35 INFO  : Disconnected from the channel tcfchan#3.
+16:26:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:26:35 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:26:35 INFO  : 'jtag frequency' command is executed.
+16:26:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:26:36 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:26:36 INFO  : Context for processor 'microblaze_0' is selected.
+16:26:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:26:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:26:37 INFO  : Context for processor 'microblaze_0' is selected.
+16:26:37 INFO  : System reset is completed.
+16:26:40 INFO  : 'after 3000' command is executed.
+16:26:40 INFO  : Context for processor 'microblaze_0' is selected.
+16:26:40 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:26:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:26:40 INFO  : Context for processor 'microblaze_0' is selected.
+16:26:40 INFO  : 'con' command is executed.
+16:26:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:26:40 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:31:51 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:32:03 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:32:03 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:32:03 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:32:05 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:32:05 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:32:05 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:32:05 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
+16:32:40 INFO  : Disconnected from the channel tcfchan#5.
+16:32:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:32:40 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:32:40 INFO  : 'jtag frequency' command is executed.
+16:32:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:32:41 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:32:41 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:32:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:32:42 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:42 INFO  : System reset is completed.
+16:32:45 INFO  : 'after 3000' command is executed.
+16:32:45 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:45 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:32:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:32:45 INFO  : Context for processor 'microblaze_0' is selected.
+16:32:45 INFO  : 'con' command is executed.
+16:32:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:32:45 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:37:11 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:37:23 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:37:23 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:37:23 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:37:25 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:37:25 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:37:25 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:37:25 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
+16:37:27 INFO  : Disconnected from the channel tcfchan#7.
+16:37:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:37:28 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:37:28 INFO  : 'jtag frequency' command is executed.
+16:37:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:37:29 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:37:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:37:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:37:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:37:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:37:29 INFO  : System reset is completed.
+16:37:32 INFO  : 'after 3000' command is executed.
+16:37:32 INFO  : Context for processor 'microblaze_0' is selected.
+16:37:32 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:37:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:37:32 INFO  : Context for processor 'microblaze_0' is selected.
+16:37:32 INFO  : 'con' command is executed.
+16:37:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:37:32 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:44:38 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:44:50 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:44:50 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:44:50 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:44:52 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:44:52 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:44:52 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:44:52 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
+16:45:05 INFO  : Disconnected from the channel tcfchan#9.
+16:45:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:05 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:45:05 INFO  : 'jtag frequency' command is executed.
+16:45:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:45:07 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:45:07 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:45:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:45:07 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:07 INFO  : System reset is completed.
+16:45:10 INFO  : 'after 3000' command is executed.
+16:45:10 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:10 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:45:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:45:10 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:10 INFO  : 'con' command is executed.
+16:45:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:45:10 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+16:49:59 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:50:14 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:50:14 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+16:50:14 INFO  : Checking for BSP changes to sync application flags for project 'dk_project'...
+16:50:16 INFO  : The hardware specification used by project 'dk_project' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:50:16 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:50:16 INFO  : The file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:50:16 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project\_ide\bitstream' in project 'dk_project'.
+16:50:21 INFO  : Disconnected from the channel tcfchan#11.
+16:50:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:50:21 INFO  : Jtag cable 'RealDigital Boo 887429230053A' is selected.
+16:50:21 INFO  : 'jtag frequency' command is executed.
+16:50:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:50:22 INFO  : Device configured successfully with "C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:50:22 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:50:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:50:23 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:23 INFO  : System reset is completed.
+16:50:26 INFO  : 'after 3000' command is executed.
+16:50:26 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:26 INFO  : The application 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf' is downloaded to processor 'microblaze_0'.
+16:50:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230053A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/dk_project/Debug/dk_project.elf
+----------------End of Script----------------
+
+16:50:26 INFO  : Context for processor 'microblaze_0' is selected.
+16:50:26 INFO  : 'con' command is executed.
+16:50:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:50:26 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
