@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -92,6 +93,11 @@ set_property ip_output_repo c:/Users/ryder/Documents/ECE385/donkey_kong_ece385/f
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem {
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_g.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_b.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_r.mem
+}
 read_verilog -library xil_defaultlib -sv {
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv
@@ -100,6 +106,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/sprite_reader.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv
 }
 add_files C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/bd/mb_block/mb_block.bd

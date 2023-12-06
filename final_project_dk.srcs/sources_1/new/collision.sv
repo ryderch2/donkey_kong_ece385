@@ -28,7 +28,7 @@ module collision(
     
     parameter [9:0] JumpSX = 16;
     parameter [9:0] JumpSY = 32;
-    parameter [9:0] BallS = 12;
+    parameter [9:0] BallS = 6;
     parameter [9:0] Barrel_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Barrel_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Barrel_Y_Min=0;       // Topmost point on the Y axis

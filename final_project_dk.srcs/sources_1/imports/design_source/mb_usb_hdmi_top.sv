@@ -57,11 +57,11 @@ module mb_usb_hdmi_top(
     logic barrelOn;
 
     logic hsync, vsync, vde;
-    logic [7:0] red, green, blue;
+    logic [7:0] red, green, blue, poggywoggy;
     logic reset_ah;
     logic coll0;
     
-    logic [7:0] jumping;
+    logic jumping;
     
     logic [2:0] game_state;
     logic reset_game;
@@ -73,7 +73,7 @@ module mb_usb_hdmi_top(
     HexDriver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({{1'b0, game_state}, {coll0, coll0, coll0, coll0}, jumping[7:4], jumping[3:0]}),
+        .in({{1'b0, game_state}, {coll0, coll0, coll0, coll0}, poggywoggy[7:4], poggywoggy[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -175,10 +175,10 @@ module mb_usb_hdmi_top(
         .Reset(reset_ah | reset_game),
         .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
         .keycode0(keycode0_gpio[7:0]),
-        .keycode1(keycode0_gpio[15:8]),    //Notice: only one keycode connected to ball by default
+        .keycode1(keycode0_gpio[15:8]),    //Notice: only two keycode connected to ball by default
         .JumpX(jumpxsig),
         .JumpY(jumpysig),
-        .jumping(jumping)
+        .Jumping(jumping)
     );
     
     //Color Mapper Module   
@@ -191,6 +191,8 @@ module mb_usb_hdmi_top(
         .JumpX(jumpxsig),
         .JumpY(jumpysig),
         .BallOn(barrelOn),
+        .Jumping(jumping),
+        .Clk(Clk),
         .Red(red),
         .Green(green),
         .Blue(blue)

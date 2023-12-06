@@ -15,8 +15,9 @@
 
 
 module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size, JumpX, JumpY,
-                       input logic BallOn,
-                       output logic [7:0]  Red, Green, Blue );
+                       input logic BallOn, Jumping, Clk,
+                       output logic [7:0]  Red, Green, Blue
+                       );
 
 	 
  /* Old Ball: Generated square box by checking if the current pixel is within a square of length
@@ -76,10 +77,15 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     logic [10:0] jump_size_x = 16;
     logic [10:0] jump_size_y = 32;
     
+    logic [23:0] barrel_color;
+    
+    logic [18:0] barrel_address;
+    
     int DistX, DistY, Size;
     assign DistX = DrawX - BallX;
     assign DistY = DrawY - BallY;
     assign Size = Ball_size;
+    assign barrel_address=(DistY+10'd4)*12+(DistX+10'd6);
     
     always_comb
     begin:Ball_on_proc
@@ -173,15 +179,20 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Green = 8'h14;
             Blue = 8'h93;
         end
-        else if ((jump_on == 1'b1)) begin 
+        else if ((jump_on == 1'b1) && (!Jumping)) begin 
             Red = 8'hff;
             Green = 8'h00;
             Blue = 8'h00;
         end 
-        else if ((barrel_on == 1'b1) && (BallOn)) begin 
+        else if ((jump_on == 1'b1) && (Jumping)) begin 
             Red = 8'hff;
-            Green = 8'ha5;
-            Blue = 8'h00;
+            Green = 8'h00;
+            Blue = 8'h11;
+        end 
+        else if ((barrel_on == 1'b1) && (BallOn)) begin 
+            Red = barrel_color[7:0];
+            Green = barrel_color[15:8];
+            Blue = barrel_color[23:16];
         end
         else if ((barrel_on == 1'b1) && (!BallOn)) begin 
             Red = 8'hff;
@@ -199,5 +210,7 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Blue = 4'h00;
         end      
     end 
+    
+    barrel_sprite mygreenbarrel (.read_address(barrel_address), .Clk(Clk), .data_Out(barrel_color));
     
 endmodule

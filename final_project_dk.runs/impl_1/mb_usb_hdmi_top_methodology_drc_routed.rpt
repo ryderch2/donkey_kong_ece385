@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Mon Dec  4 21:49:03 2023
+| Date         : Wed Dec  6 15:58:00 2023
 | Host         : LAPTOP-G5II2H4B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,12 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 112
+             Violations found: 113
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 63         |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 2          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 60         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
@@ -46,6 +48,26 @@ Related violations: <none>
 TIMING-4#2 Critical Warning
 Invalid primary clock redefinition on a clock tree  
 Invalid clock redefinition on a clock tree. The primary clock mb_block_i/clk_wiz_1/inst/clk_in1 is defined downstream of clock clk_100 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_100 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_100] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_100 and clk_out1_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_100] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -335,32 +357,17 @@ Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/climbing_reg/C is not reached by a timing clock
+The clock pin jumpman_instance/Jumping_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[0]/C is not reached by a timing clock
+The clock pin jumpman_instance/climbing_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#61 Critical Warning
-Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#62 Critical Warning
-Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#63 Critical Warning
-Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[4]/C is not reached by a timing clock
+The clock pin jumpman_instance/jumping_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
@@ -375,17 +382,17 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell game_instance/Barrel_Y_Motion[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) jumpman_instance/JumpY_reg[6]/CLR, jumpman_instance/JumpY_reg[7]/PRE,
+LUT cell game_instance/Barrel_Y_Motion[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) jumpman_instance/JumpY_reg[2]/CLR, jumpman_instance/JumpY_reg[3]/PRE,
+jumpman_instance/JumpY_reg[4]/PRE, jumpman_instance/JumpY_reg[5]/PRE,
+jumpman_instance/JumpY_reg[6]/CLR, jumpman_instance/JumpY_reg[7]/PRE,
 jumpman_instance/JumpY_reg[8]/PRE, jumpman_instance/JumpY_reg[9]/CLR,
 jumpman_instance/Jump_X_Motion_reg[0]/CLR,
 jumpman_instance/Jump_X_Motion_reg[8]/CLR,
 jumpman_instance/Jump_Y_Motion_reg[0]/CLR,
 jumpman_instance/Jump_Y_Motion_reg[1]/CLR,
 jumpman_instance/Jump_Y_Motion_reg[9]/CLR,
-jumpman_instance/climbing_reg/CLR, jumpman_instance/jumping_reg[0]/CLR,
-jumpman_instance/jumping_reg[1]/CLR, jumpman_instance/jumping_reg[2]/CLR,
-jumpman_instance/jumping_reg[3]/CLR, jumpman_instance/jumping_reg[4]/CLR
- (the first 15 of 59 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+jumpman_instance/climbing_reg/CLR, jumpman_instance/jumping_reg/CLR
+ (the first 15 of 55 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
