@@ -35571,6 +35571,7 @@ TRACE::2023-12-06.11:51:44::SCWMssOS::Checking the sw design at  C:/Users/sam/do
 TRACE::2023-12-06.11:51:44::SCWMssOS::DEBUG:  swdes dump  C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2023-12-06.11:51:44::SCWMssOS::Sw design exists and opened at  C:/Users/sam/donkey_kong_ece385/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+<<<<<<< HEAD
 TRACE::2023-12-06.14:46:51::SCWPlatform::Trying to open the hw design at C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
 TRACE::2023-12-06.14:46:51::SCWPlatform::DSA given C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
 TRACE::2023-12-06.14:46:51::SCWPlatform::DSA absoulate path C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
@@ -36033,3 +36034,5 @@ TRACE::2023-12-06.14:47:07::SCWMssOS::Checking the sw design at  C:/Users/ryder/
 TRACE::2023-12-06.14:47:07::SCWMssOS::DEBUG:  swdes dump  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2023-12-06.14:47:07::SCWMssOS::Sw design exists and opened at  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+=======
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843

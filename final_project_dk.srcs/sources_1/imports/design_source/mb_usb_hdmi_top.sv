@@ -192,11 +192,16 @@ module mb_usb_hdmi_top(
         .JumpY(jumpysig),
         .BallOn(barrelOn),
         .Jumping(jumping),
+<<<<<<< HEAD
         .Clk(Clk),
+=======
+        .clk(Clk),
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
         .Red(red),
         .Green(green),
         .Blue(blue)
     );
+    barrelg mygreenbarrel (.read_address(6), .Clk(Clk), .data_Out(poggywoggy));
     
     //Collision Module
     collision collider_0(

@@ -15,7 +15,11 @@
 
 
 module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size, JumpX, JumpY,
+<<<<<<< HEAD
                        input logic BallOn, Jumping, Clk,
+=======
+                       input logic BallOn, Jumping, clk,
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
                        output logic [7:0]  Red, Green, Blue
                        );
 
@@ -77,9 +81,13 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
     logic [10:0] jump_size_x = 16;
     logic [10:0] jump_size_y = 32;
     
+<<<<<<< HEAD
     logic [23:0] barrel_color;
     
     logic [18:0] barrel_address;
+=======
+    logic [7:0] barrelgreen;
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
     
     int DistX, DistY, Size;
     assign DistX = DrawX - BallX;
@@ -184,15 +192,27 @@ module  color_mapper ( input  logic [9:0]  DrawX, DrawY, BallX, BallY, Ball_size
             Green = 8'h00;
             Blue = 8'h00;
         end 
+<<<<<<< HEAD
         else if ((jump_on == 1'b1) && (Jumping)) begin 
+=======
+        else if ((jump_on == 1'b1) && (!Jumping)) begin 
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
             Red = 8'hff;
             Green = 8'h00;
             Blue = 8'h11;
         end 
         else if ((barrel_on == 1'b1) && (BallOn)) begin 
+<<<<<<< HEAD
             Red = barrel_color[7:0];
             Green = barrel_color[15:8];
             Blue = barrel_color[23:16];
+=======
+            Red = 8'h10;
+//            Green = 8'ha5;
+            barrelg mygreenbarrel (.read_address(6), .Clk(clk), .data_Out(barrelgreen));
+            Green = barrelgreen;
+            Blue = 8'h10;
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
         end
         else if ((barrel_on == 1'b1) && (!BallOn)) begin 
             Red = 8'hff;

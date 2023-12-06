@@ -150,15 +150,6 @@
           <Proxy FileSetName="mb_block_axi_timer_0_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/design_source/Color_Mapper.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/Color_Mapper.sv"/>
-          <Attr Name="ImportTime" Val="1698268960"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/design_source/VGA_controller.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/VGA_controller.sv"/>
@@ -205,17 +196,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/sprite_reader.sv">
+      <File Path="$PSRCDIR/sources_1/imports/design_source/mb_usb_hdmi_top.sv">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/mb_usb_hdmi_top.sv"/>
+          <Attr Name="ImportTime" Val="1698265574"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/design_source/mb_usb_hdmi_top.sv">
+      <File Path="$PSRCDIR/sources_1/imports/design_source/Color_Mapper.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/mb_usb_hdmi_top.sv"/>
-          <Attr Name="ImportTime" Val="1698265574"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../old/lab6_2_provided/lab6.2_provided/design_source/Color_Mapper.sv"/>
+          <Attr Name="ImportTime" Val="1698268960"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/sprite_reader.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

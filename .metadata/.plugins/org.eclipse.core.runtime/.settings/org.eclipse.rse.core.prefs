@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 activeuserprofiles=LAPTOP-G5II2H4B;Team;pinnochio
+=======
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=sam
 useridperkey=pinnochio.Local\=sam;

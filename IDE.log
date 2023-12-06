@@ -168,6 +168,7 @@ con
 ----------------End of Script----------------
 
 11:51:58 INFO  : Launch script is exported to file 'C:\Users\sam\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+<<<<<<< HEAD
 13:51:34 DEBUG : Logs will be stored at 'C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/IDE.log'.
 13:51:35 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\temp_xsdb_launch_script.tcl
 13:51:40 INFO  : XSCT server has started successfully.
@@ -224,3 +225,5 @@ con
 ----------------End of Script----------------
 
 14:47:37 INFO  : Launch script is exported to file 'C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\dk_project_system\_ide\scripts\systemdebugger_dk_project_system_standalone.tcl'
+=======
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843

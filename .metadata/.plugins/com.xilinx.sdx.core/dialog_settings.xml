@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<item key="sdx.custom.platform.repository.locations" value="C:\Users\sam\donkey_kong_ece385\mb_usb_hdmi_top\export\mb_usb_hdmi_top;C:\Users\ryder\Documents\ECE385\donkey_kong_ece385\mb_usb_hdmi_top\export\mb_usb_hdmi_top"/>
+=======
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\sam\donkey_kong_ece385\mb_usb_hdmi_top\export\mb_usb_hdmi_top"/>
+>>>>>>> 90551e02da96a3d23a712602d717e3b11f2b8843
 </section>
