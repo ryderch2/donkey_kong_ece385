@@ -22,35 +22,35 @@ module  jumpman ( input logic Reset, frame_clk,
     logic [9:0] Jump_X_Motion, Jump_Y_Motion;
 	 
     parameter [9:0] Jump_X_Center=50;  // Center position on the X axis
-    parameter [9:0] Jump_Y_Center=340;  // Center position on the Y axis
+    parameter [9:0] Jump_Y_Center=442;  // Center position on the Y axis
     parameter [9:0] Jump_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Jump_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Jump_Y_Min=0;       // Topmost point on the Y axis
-    parameter [9:0] Jump_Y_Max=473;     // Bottommost point on the Y axis
+    parameter [9:0] Jump_Y_Max=474;     // Bottommost point on the Y axis
     parameter [9:0] Jump_X_Step=1;      // Step size on the X axis
     parameter [9:0] Jump_Y_Step=1;      // Step size on the Y axis
     parameter [9:0] Jump_Y_Jump=2;
     parameter [9:0] Box_1_X_Start = 0;
     parameter [9:0] Box_1_X_End = 480;
-    parameter [9:0] Box_1_Y = 152;
+    parameter [9:0] Box_1_Y = 153;
     parameter [9:0] Box_2_X_Start = 160;
     parameter [9:0] Box_2_X_End = 640;
-    parameter [9:0] Box_2_Y = 252;
+    parameter [9:0] Box_2_Y = 253;
     parameter [9:0] Box_3_X_Start = 20;
     parameter [9:0] Box_3_X_End = 560;
-    parameter [9:0] Box_3_Y = 352;
+    parameter [9:0] Box_3_Y = 353;
     
     parameter [9:0] Ladder_1_X_Start = 440;
     parameter [9:0] Ladder_1_X_End = 460;
-    parameter [9:0] Ladder_1_Y_Start = 158;
+    parameter [9:0] Ladder_1_Y_Start = 157;
     parameter [9:0] Ladder_1_Y_End = 250;
     parameter [9:0] Ladder_2_X_Start = 200;
     parameter [9:0] Ladder_2_X_End = 220;
-    parameter [9:0] Ladder_2_Y_Start = 258;
+    parameter [9:0] Ladder_2_Y_Start = 257;
     parameter [9:0] Ladder_2_Y_End = 350;
     parameter [9:0] Ladder_3_X_Start = 500;
     parameter [9:0] Ladder_3_X_End = 520;
-    parameter [9:0] Ladder_3_Y_Start = 358;
+    parameter [9:0] Ladder_3_Y_Start = 357;
     parameter [9:0] Ladder_3_Y_End = 472;
     
     parameter [9:0] JumpSX = 16;  // default Jump size

@@ -97,6 +97,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/VGA_controller.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/barrel.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/collision.sv
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/dk_game.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/hex.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/jumpman.sv
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv

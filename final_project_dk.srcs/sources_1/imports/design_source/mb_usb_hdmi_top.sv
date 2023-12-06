@@ -63,6 +63,9 @@ module mb_usb_hdmi_top(
     
     logic [7:0] jumping;
     
+    logic [2:0] game_state;
+    logic reset_game;
+    
     assign reset_ah = reset_rtl_0;
     
     
@@ -70,7 +73,7 @@ module mb_usb_hdmi_top(
     HexDriver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({4'h0, {coll0, coll0, coll0, coll0}, jumping[7:4], jumping[3:0]}),
+        .in({{1'b0, game_state}, {coll0, coll0, coll0, coll0}, jumping[7:4], jumping[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -147,10 +150,18 @@ module mb_usb_hdmi_top(
         .TMDS_DATA_N(hdmi_tmds_data_n)          
     );
 
+    dk_game game_instance(
+        .Clk(vsync),
+        .Reset(reset_ah),
+        .collisions(coll0),
+        .keycode(keycode0_gpio[7:0]),
+        .game_state(game_state),
+        .reset_game(reset_game)
+    );
     
     //Ball Module
     barrel barrel_instance(
-        .Reset(reset_ah),
+        .Reset(reset_ah | reset_game),
         .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
         .BarrelX(ballxsig),
@@ -161,7 +172,7 @@ module mb_usb_hdmi_top(
     
     //Ball Module
     jumpman jumpman_instance(
-        .Reset(reset_ah),
+        .Reset(reset_ah | reset_game),
         .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
         .keycode0(keycode0_gpio[7:0]),
         .keycode1(keycode0_gpio[15:8]),    //Notice: only one keycode connected to ball by default

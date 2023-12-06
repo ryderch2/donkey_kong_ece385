@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Dec  3 18:55:10 2023
+| Date         : Mon Dec  4 21:49:03 2023
 | Host         : LAPTOP-G5II2H4B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 108
+             Violations found: 112
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 60         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 63         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
@@ -195,155 +195,170 @@ Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[0]/C is not reached by a timing clock
+The clock pin game_instance/curr_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[1]/C is not reached by a timing clock
+The clock pin game_instance/curr_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[2]/C is not reached by a timing clock
+The clock pin game_instance/curr_state_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[3]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[4]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[5]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[6]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[7]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[8]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[9]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[0]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[1]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[2]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpX_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[3]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[4]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[5]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[6]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[7]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[8]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[9]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_X_Motion_reg[0]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_X_Motion_reg[8]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[0]/C is not reached by a timing clock
+The clock pin jumpman_instance/JumpY_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[1]/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_X_Motion_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[9]/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_X_Motion_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/climbing_reg/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_Y_Motion_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[0]/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_Y_Motion_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[1]/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_Y_Motion_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[2]/C is not reached by a timing clock
+The clock pin jumpman_instance/climbing_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[3]/C is not reached by a timing clock
+The clock pin jumpman_instance/jumping_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
 The clock pin jumpman_instance/jumping_reg[4]/C is not reached by a timing clock
 Related violations: <none>
@@ -360,20 +375,35 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell game_instance/Barrel_Y_Motion[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) jumpman_instance/JumpY_reg[6]/CLR, jumpman_instance/JumpY_reg[7]/PRE,
+jumpman_instance/JumpY_reg[8]/PRE, jumpman_instance/JumpY_reg[9]/CLR,
+jumpman_instance/Jump_X_Motion_reg[0]/CLR,
+jumpman_instance/Jump_X_Motion_reg[8]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[0]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[1]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[9]/CLR,
+jumpman_instance/climbing_reg/CLR, jumpman_instance/jumping_reg[0]/CLR,
+jumpman_instance/jumping_reg[1]/CLR, jumpman_instance/jumping_reg[2]/CLR,
+jumpman_instance/jumping_reg[3]/CLR, jumpman_instance/jumping_reg[4]/CLR
+ (the first 15 of 59 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
 LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,

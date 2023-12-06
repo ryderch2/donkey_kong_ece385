@@ -1,4 +1,4 @@
-18:56:49 **** Incremental Build of configuration Debug for project dk_project ****
+21:51:01 **** Incremental Build of configuration Debug for project dk_project ****
 make all 
 'Building file: ../src/src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -74,5 +74,5 @@ mb-size dk_project.elf  |tee "dk_project.elf.size"
 'Finished building: dk_project.elf.size'
 ' '
 
-18:56:50 Build Finished (took 1s.243ms)
+21:51:03 Build Finished (took 1s.543ms)
 
