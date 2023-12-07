@@ -52,7 +52,7 @@ module  barrel ( input logic Reset, frame_clk,
     parameter [9:0] Ladder_3_Y_End = 472;
     
 
-    assign BarrelS = 6;  // default Barrel size
+    assign BarrelS = 12;  // default Barrel size
     
     assign direction = 1;
     logic [3:0] counter;

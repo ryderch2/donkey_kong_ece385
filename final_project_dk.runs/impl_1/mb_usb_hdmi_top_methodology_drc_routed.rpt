@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Dec  6 16:49:09 2023
+| Date         : Wed Dec  6 17:45:31 2023
 | Host         : LAPTOP-G5II2H4B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 126
+             Violations found: 124
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -32,11 +32,11 @@ Table of Contents
 | TIMING-7  | Critical Warning | No common node between related clocks              | 2          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 67         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 6          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 4          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 3          |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -354,7 +354,7 @@ Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[2]/C is not reached by a timing clock
+The clock pin jumpman_instance/Jump_Y_Motion_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
@@ -424,7 +424,7 @@ jumpman_instance/Jump_X_Motion_reg[0]/CLR,
 jumpman_instance/Jump_X_Motion_reg[8]/CLR,
 jumpman_instance/Jump_Y_Motion_reg[0]/CLR,
 jumpman_instance/Jump_Y_Motion_reg[1]/CLR,
-jumpman_instance/Jump_Y_Motion_reg[2]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[9]/CLR,
 jumpman_instance/climbing_reg/CLR, jumpman_instance/jumping_reg[0]/CLR,
 jumpman_instance/jumping_reg[1]/CLR, jumpman_instance/jumping_reg[2]/CLR,
 jumpman_instance/jumping_reg[3]/CLR, jumpman_instance/jumping_reg[4]/CLR,
@@ -449,11 +449,6 @@ Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell vga/jump_on_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) color_instance/jump_on_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#6 Warning
-LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[3]/CLR, vga_to_hdmi/inst/encr/cnt_reg[4]/CLR,
@@ -471,32 +466,32 @@ Related violations: <none>
 
 SYNTH-10#1 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#2 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#3 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#4 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3__2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2__2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#5 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#6 Warning
 Wide multiplier  
-Detected multiplier at color_instance/jump_on3__4 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/barrel_on2__4 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -681,17 +676,12 @@ Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch color_instance/jump_on_reg cannot be properly analyzed as its control pin color_instance/jump_on_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
 The latch color_instance/ladder_on_reg cannot be properly analyzed as its control pin color_instance/ladder_on_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 4 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 3 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

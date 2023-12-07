@@ -126,7 +126,6 @@ module  jumpman ( input logic Reset, frame_clk,
                 end
                 if ((keycode0 == 8'h2C || keycode1 == 8'h2C) && jumping <= 8'h10)//spc
                 begin
-                    Jumping <= 1;
                     jumping <= jumping + 1;
                     Jump_Y_Motion <= -Jump_Y_Jump;
                 end
@@ -140,28 +139,40 @@ module  jumpman ( input logic Reset, frame_clk,
 			
 			    if (jumping != 0 && keycode0 != 8'h2C && keycode1 != 8'h2C)
 			    begin
-			        Jumping <= 1;
 			        jumping <= jumping - 1;
 			    end
 			    if (climbing != 0 && keycode0 != 8'h1A && keycode1 != 8'h1A && keycode0 != 8'h16 && keycode1 != 8'h16)
 			        climbing <= 8'h00;
 			       
-			     if (jumping == 0)
-			         Jumping <= 0;
                 
 
                if ((JumpY + Jump_Y_Motion + JumpSY > Jump_Y_Max))
+               begin
+                  Jumping <= 0;
 		          JumpY <= JumpY;  // Update Jump position
+		       end
 		        
 		       //make sure not on a platform
 		       else if ( (JumpY + Jump_Y_Motion + JumpSY >= Box_3_Y) && (JumpY + Jump_Y_Motion + JumpSY < Box_3_Y + 8) && (JumpX <= Box_3_X_End))
+		       begin
+		       	  Jumping <= 0;
 		          JumpY <= JumpY;
+               end
 		       else if ( (JumpY + Jump_Y_Motion + JumpSY >= Box_2_Y) && (JumpY + Jump_Y_Motion + JumpSY < Box_2_Y + 8) && (JumpX + JumpSX >= Box_2_X_Start))
+		       begin
+		       	  Jumping <= 0;
 		          JumpY <= JumpY;
+               end
 		       else if ( (JumpY + Jump_Y_Motion + JumpSY >= Box_1_Y) && (JumpY + Jump_Y_Motion + JumpSY < Box_1_Y + 8) && (JumpX <= Box_1_X_End))
+		       begin
+		       	  Jumping <= 0;
 		          JumpY <= JumpY;
+               end
 		       else
+		       begin
+		          Jumping <= 1;
 		          JumpY <= (JumpY + Jump_Y_Motion);
+		       end
 		          
                if ((JumpX + Jump_X_Motion + JumpSX < Jump_X_Max) && (JumpX + Jump_X_Motion > Jump_X_Min))
 		          JumpX <= (JumpX + Jump_X_Motion);  // Update Jump position

@@ -33,9 +33,9 @@ module  barrel_sprite
 		output logic [23:0] data_Out
 );
 
-logic [7:0] memr [0:119];
-logic [7:0] memg [0:119];
-logic [7:0] memb [0:119];
+logic [7:0] memr [0:479];
+logic [7:0] memg [0:479];
+logic [7:0] memb [0:479];
 
 initial
 begin
@@ -46,7 +46,7 @@ end
 
 
 always_ff @ (posedge Clk) begin
-    if(read_address >= 19'd0 && read_address <= 19'd119)
+    if(read_address >= 19'd0 && read_address <= 19'd479)
     begin
 	   data_Out[7:0] <= memr[read_address];
 	   data_Out[15:8] <= memg[read_address];
