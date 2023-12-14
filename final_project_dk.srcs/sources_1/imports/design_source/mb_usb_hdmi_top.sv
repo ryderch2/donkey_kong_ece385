@@ -54,17 +54,25 @@ module mb_usb_hdmi_top(
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
     logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig, jumpxsig, jumpysig;
-    logic barrelOn;
+    logic [9:0] ball2xsig, ball2ysig;
+    logic [9:0] ball3xsig, ball3ysig;
+    logic [9:0] ball4xsig, ball4ysig;
+    logic [9:0] ball5xsig, ball5ysig;
+    logic [1:0] barrelOn, barrel2On, barrel3On, barrel4On, barrel5On;
 
     logic hsync, vsync, vde;
-    logic [7:0] red, green, blue, poggywoggy;
+    logic [7:0] red, green, blue;
     logic reset_ah;
-    logic coll0;
+    logic coll0, coll2;
     
-    logic jumping;
+    logic jumping, direction, climbing, frame, running;
     
-    logic [2:0] game_state;
-    logic reset_game;
+    logic [3:0] game_state;
+    logic [1:0] lives;
+    logic [7:0] Delay;
+    logic reset_game, princess_grab;
+    
+    int timer10, timer1;
     
     assign reset_ah = reset_rtl_0;
     
@@ -73,7 +81,7 @@ module mb_usb_hdmi_top(
     HexDriver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({{1'b0, game_state}, {coll0, coll0, coll0, coll0}, poggywoggy[7:4], poggywoggy[3:0]}),
+        .in({game_state, {coll2, coll0, coll2, coll0}, Delay[7:4], Delay[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -153,10 +161,14 @@ module mb_usb_hdmi_top(
     dk_game game_instance(
         .Clk(vsync),
         .Reset(reset_ah),
-        .collisions(coll0),
+        .collisions(coll0 | coll2 | coll3 | coll4 | coll5),
         .keycode(keycode0_gpio[7:0]),
         .game_state(game_state),
-        .reset_game(reset_game)
+        .timer10(timer10),
+        .timer1(timer1),
+        .lives(lives),
+        .reset_game(reset_game),
+        .save_princess(princess_grab)
     );
     
     //Ball Module
@@ -167,7 +179,55 @@ module mb_usb_hdmi_top(
         .BarrelX(ballxsig),
         .BarrelY(ballysig),
         .BarrelS(ballsizesig),
-        .BarrelOn(barrelOn)
+        .BarrelState(barrelOn)
+    );
+    
+    barrel #(
+        .Delay(30))
+    barrel2_instance(
+        .Reset(reset_ah | reset_game),
+        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .BarrelX(ball2xsig),
+        .BarrelY(ball2ysig),
+        .BarrelS(ballsizesig),
+        .BarrelState(barrel2On)
+    );
+    
+    barrel #(
+        .Delay(100))
+    barrel3_instance(
+        .Reset(reset_ah | reset_game),
+        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .BarrelX(ball3xsig),
+        .BarrelY(ball3ysig),
+        .BarrelS(ballsizesig),
+        .BarrelState(barrel3On)
+    );
+    
+    barrel #(
+        .Delay(200))
+    barrel4_instance(
+        .Reset(reset_ah | reset_game),
+        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .BarrelX(ball4xsig),
+        .BarrelY(ball4ysig),
+        .BarrelS(ballsizesig),
+        .BarrelState(barrel4On)
+    );
+    
+    barrel #(
+        .Delay(500))
+    barrel5_instance(
+        .Reset(reset_ah | reset_game),
+        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .BarrelX(ball5xsig),
+        .BarrelY(ball5ysig),
+        .BarrelS(ballsizesig),
+        .BarrelState(barrel5On)
     );
     
     //Ball Module
@@ -178,7 +238,12 @@ module mb_usb_hdmi_top(
         .keycode1(keycode0_gpio[15:8]),    //Notice: only two keycode connected to ball by default
         .JumpX(jumpxsig),
         .JumpY(jumpysig),
-        .Jumping(jumping)
+        .Jumping(jumping),
+        .Direction(direction),
+        .Climbing(climbing),
+        .Running(running),
+        .Frame(frame),
+        .SavePrincess(princess_grab)
     );
     
     //Color Mapper Module   
@@ -190,9 +255,31 @@ module mb_usb_hdmi_top(
         .Ball_size(ballsizesig),
         .JumpX(jumpxsig),
         .JumpY(jumpysig),
+        
+        .Ball2X(ball2xsig),
+        .Ball2Y(ball2ysig),
+        .Ball2On(barrel2On),
+        .Ball3X(ball3xsig),
+        .Ball3Y(ball3ysig),
+        .Ball3On(barrel3On),
+        .Ball4X(ball4xsig),
+        .Ball4Y(ball4ysig),
+        .Ball4On(barrel4On),
+        .Ball5X(ball5xsig),
+        .Ball5Y(ball5ysig),
+        .Ball5On(barrel5On),
+        
+        .game_state(game_state),
+        .lives(lives),
         .BallOn(barrelOn),
         .Jumping(jumping),
-        .Clk(Clk),
+        .Direction(direction),
+        .Climbing(climbing),
+        .Frame(frame),
+        .Running(running),
+        .Clk(clk_25MHz),
+        .timer10(timer10),
+        .timer1(timer1),
         .Red(red),
         .Green(green),
         .Blue(blue)
@@ -206,6 +293,42 @@ module mb_usb_hdmi_top(
         .JumpX(jumpxsig),
         .JumpY(jumpysig),
         .Collision(coll0)
+    );
+    
+    collision collider_2(
+        .frame_clk(vsync),
+        .BallX(ball2xsig),
+        .BallY(ball2ysig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .Collision(coll2)
+    );
+    
+    collision collider_3(
+        .frame_clk(vsync),
+        .BallX(ball3xsig),
+        .BallY(ball3ysig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .Collision(coll3)
+    );
+    
+    collision collider_4(
+        .frame_clk(vsync),
+        .BallX(ball4xsig),
+        .BallY(ball4ysig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .Collision(coll4)
+    );
+    
+    collision collider_5(
+        .frame_clk(vsync),
+        .BallX(ball5xsig),
+        .BallY(ball5ysig),
+        .JumpX(jumpxsig),
+        .JumpY(jumpysig),
+        .Collision(coll5)
     );
     
 endmodule

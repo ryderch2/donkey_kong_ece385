@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -97,6 +96,45 @@ read_mem {
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_g.mem
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_b.mem
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/new/barrel_r.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/barrel2g.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/barrel2r.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/barrel2b.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/donkey_kongB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/donkey_kongR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/donkey_kongG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/start_menuG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/game_menuG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/princessG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/start_menuB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/princessR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/digitsG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/digitsR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/end_menuB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/game_menuR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/end_menuG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/digitsB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/princessB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/end_menuR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/game_menuB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/start_menuR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariojumpB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariojumpR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariojumpG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioidleB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioidleG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioidleR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioclimbG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioclimbR.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/marioclimbB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun1B.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun1R.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun2B.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun2R.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun1G.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/mariorun2G.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/win_menuG.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/win_menuB.mem
+  C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/sprite_bytes/win_menuR.mem
 }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/ryder/Documents/ECE385/donkey_kong_ece385/final_project_dk.srcs/sources_1/imports/design_source/Color_Mapper.sv

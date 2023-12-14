@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Dec  6 17:45:31 2023
+| Date         : Fri Dec  8 10:42:33 2023
 | Host         : LAPTOP-G5II2H4B running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,20 +23,19 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 124
+             Violations found: 604
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 2          |
-| TIMING-7  | Critical Warning | No common node between related clocks              | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 67         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 463        |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
-| SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
+| DPIR-1    | Warning          | Asynchronous driver check                          | 52         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 7          |
+| SYNTH-10  | Warning          | Wide multiplier                                    | 30         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 3          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 13         |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -52,357 +51,2317 @@ Invalid primary clock redefinition on a clock tree
 Invalid clock redefinition on a clock tree. The primary clock mb_block_i/clk_wiz_1/inst/clk_in1 is defined downstream of clock clk_100 and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
-TIMING-6#1 Critical Warning
-No common primary clock between related clocks  
-The clocks clk_100 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_100] -to [get_clocks clk_out1_clk_wiz_0]
-Related violations: <none>
-
-TIMING-6#2 Critical Warning
-No common primary clock between related clocks  
-The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
-Related violations: <none>
-
-TIMING-7#1 Critical Warning
-No common node between related clocks  
-The clocks clk_100 and clk_out1_clk_wiz_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_100] -to [get_clocks clk_out1_clk_wiz_0]
-Related violations: <none>
-
-TIMING-7#2 Critical Warning
-No common node between related clocks  
-The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
-Related violations: <none>
-
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelOn_reg/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelState_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[3]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[4]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[5]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[6]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[7]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelX_reg[9]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelX_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[3]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[4]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[5]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[6]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[7]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/BarrelY_reg[9]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/BarrelY_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/Barrel_X_Motion_reg[5]/C is not reached by a timing clock
+The clock pin barrel2_instance/Barrel_X_Motion_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/Barrel_X_Motion_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/counter_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/counter_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/counter_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin barrel_instance/counter_reg[3]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin collider_0/Collision_reg/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin game_instance/curr_state_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin game_instance/curr_state_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin game_instance/curr_state_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[3]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[4]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[5]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[6]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[7]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpX_reg[9]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[3]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[4]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[5]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[6]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[7]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/JumpY_reg[9]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_X_Motion_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_X_Motion_reg[8]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jump_Y_Motion_reg[9]/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/Jumping_reg/C is not reached by a timing clock
+The clock pin barrel2_instance/barrel_delay_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/climbing_reg/C is not reached by a timing clock
+The clock pin barrel2_instance/counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[0]/C is not reached by a timing clock
+The clock pin barrel2_instance/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[1]/C is not reached by a timing clock
+The clock pin barrel2_instance/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[2]/C is not reached by a timing clock
+The clock pin barrel2_instance/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[3]/C is not reached by a timing clock
+The clock pin barrel3_instance/BarrelState_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[4]/C is not reached by a timing clock
+The clock pin barrel3_instance/BarrelX_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[5]/C is not reached by a timing clock
+The clock pin barrel3_instance/BarrelX_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin jumpman_instance/jumping_reg[6]/C is not reached by a timing clock
+The clock pin barrel3_instance/BarrelX_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelX_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/BarrelY_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/Barrel_X_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/Barrel_X_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/barrel_delay_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#123 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#124 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel3_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#125 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#126 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#127 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#128 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#129 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelX_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#137 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#139 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#140 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#141 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#142 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#143 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#144 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#145 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/BarrelY_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#146 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/Barrel_X_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#147 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#148 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/Barrel_X_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#149 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#150 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#151 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#152 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#153 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#154 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#155 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#156 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#157 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#158 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#159 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#160 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#161 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#162 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#163 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#164 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#165 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#166 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#167 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#168 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#169 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#170 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#171 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#172 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#173 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#174 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#175 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#176 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#182 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/barrel_delay_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#183 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#184 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#185 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#186 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel4_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#187 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#188 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#189 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#190 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#191 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#192 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#193 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#194 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#195 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelX_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/BarrelY_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/Barrel_X_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#209 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#210 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/Barrel_X_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#211 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#212 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#213 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#214 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#215 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#216 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#217 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#218 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#219 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#220 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#221 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#222 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#223 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#224 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#225 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#226 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#227 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#228 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#229 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#230 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#231 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#232 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#233 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#234 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#235 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#236 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#237 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#238 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#239 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#240 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#241 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#242 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#243 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#244 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/barrel_delay_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#245 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#246 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#247 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#248 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel5_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#249 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelState_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#250 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#251 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#252 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#253 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#254 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#255 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#256 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#257 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#258 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#259 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelX_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#260 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#261 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#262 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#263 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#264 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#265 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#266 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#267 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#268 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#269 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/BarrelY_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#270 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/Barrel_X_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#271 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/Barrel_X_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#272 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/Barrel_X_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#273 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/Barrel_Y_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#274 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/Barrel_Y_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#275 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#276 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#277 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#278 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#279 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#280 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#281 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#282 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#283 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#284 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#285 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#286 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#287 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#288 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#289 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#290 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#291 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#292 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#293 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#294 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#295 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#296 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#297 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#298 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#299 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#300 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#301 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#302 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#303 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#304 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#305 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#306 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/barrel_delay_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#307 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#308 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#309 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#310 Critical Warning
+Non-clocked sequential cell  
+The clock pin barrel_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#311 Critical Warning
+Non-clocked sequential cell  
+The clock pin collider_0/Collision_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#312 Critical Warning
+Non-clocked sequential cell  
+The clock pin collider_2/Collision_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#313 Critical Warning
+Non-clocked sequential cell  
+The clock pin collider_3/Collision_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#314 Critical Warning
+Non-clocked sequential cell  
+The clock pin collider_4/Collision_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#315 Critical Warning
+Non-clocked sequential cell  
+The clock pin collider_5/Collision_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#316 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#317 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#318 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#319 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#320 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#321 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#322 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#323 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#324 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#325 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#326 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#327 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#328 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#329 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#330 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#331 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#332 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#333 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#334 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#335 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#336 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#337 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#338 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#339 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#340 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#341 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#342 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#343 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#344 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#345 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#346 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#347 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/counter_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#348 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/curr_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#349 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/curr_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#350 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/curr_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#351 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/curr_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#352 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/next_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#353 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/next_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#354 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/next_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#355 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/next_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#356 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#357 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#358 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#359 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#360 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#361 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#362 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#363 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#364 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#365 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#366 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#367 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#368 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#369 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#370 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#371 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#372 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#373 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#374 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#375 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#376 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#377 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#378 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#379 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#380 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#381 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#382 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#383 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#384 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#385 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#386 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#387 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer10_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#388 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#389 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#390 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#391 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#392 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#393 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#394 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#395 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#396 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#397 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#398 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#399 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#400 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#401 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#402 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#403 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#404 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#405 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#406 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#407 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#408 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#409 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#410 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#411 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#412 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#413 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#414 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#415 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#416 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#417 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#418 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#419 Critical Warning
+Non-clocked sequential cell  
+The clock pin game_instance/timer1_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#420 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Climbing_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#421 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Direction_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#422 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Frame_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#423 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#424 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#425 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#426 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#427 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#428 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#429 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#430 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#431 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#432 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpX_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#433 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#434 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#435 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#436 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#437 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#438 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#439 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#440 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#441 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#442 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/JumpY_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#443 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jump_X_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#444 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jump_X_Motion_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#445 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jump_Y_Motion_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#446 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jump_Y_Motion_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#447 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jump_Y_Motion_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#448 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Jumping_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#449 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/Running_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#450 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/SavePrincess_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#451 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#452 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#453 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#454 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#455 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/in_air_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#456 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#457 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#458 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#459 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#460 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#461 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#462 Critical Warning
+Non-clocked sequential cell  
+The clock pin jumpman_instance/jumping_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#463 Critical Warning
 Non-clocked sequential cell  
 The clock pin jumpman_instance/jumping_reg[7]/C is not reached by a timing clock
 Related violations: <none>
@@ -417,37 +2376,306 @@ Invalid primary clock on hierarchical pin
 A primary clock mb_block_i/clk_wiz_1/inst/clk_in1 is created on an inappropriate internal pin mb_block_i/clk_wiz_1/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address input pin color_instance/dk_address/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#14 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#15 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#16 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#17 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#18 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#19 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#20 Warning
+Asynchronous driver check  
+DSP color_instance/dk_address0 input pin color_instance/dk_address0/D[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#21 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#22 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#23 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#24 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#25 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#26 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#27 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#28 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#29 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#30 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address input pin color_instance/princess_address/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#31 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#32 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#33 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#34 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#35 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#36 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#37 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#38 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#39 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#40 Warning
+Asynchronous driver check  
+DSP color_instance/princess_address0 input pin color_instance/princess_address0/D[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#41 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#42 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#43 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#44 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#45 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#46 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#47 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#48 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#49 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#50 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#51 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#52 Warning
+Asynchronous driver check  
+DSP color_instance/text_address input pin color_instance/text_address/C[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell game_instance/Barrel_Y_Motion[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) jumpman_instance/JumpY_reg[9]/CLR,
-jumpman_instance/Jump_X_Motion_reg[0]/CLR,
-jumpman_instance/Jump_X_Motion_reg[8]/CLR,
-jumpman_instance/Jump_Y_Motion_reg[0]/CLR,
-jumpman_instance/Jump_Y_Motion_reg[1]/CLR,
-jumpman_instance/Jump_Y_Motion_reg[9]/CLR,
-jumpman_instance/climbing_reg/CLR, jumpman_instance/jumping_reg[0]/CLR,
-jumpman_instance/jumping_reg[1]/CLR, jumpman_instance/jumping_reg[2]/CLR,
-jumpman_instance/jumping_reg[3]/CLR, jumpman_instance/jumping_reg[4]/CLR,
-jumpman_instance/jumping_reg[5]/CLR, jumpman_instance/jumping_reg[6]/CLR,
-jumpman_instance/jumping_reg[7]/CLR (the first 15 of 62 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell color_instance/jump_on_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) color_instance/jump_on_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell game_instance/Jump_X_Motion[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) jumpman_instance/Jump_X_Motion_reg[8]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[0]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[1]/CLR,
+jumpman_instance/Jump_Y_Motion_reg[2]/CLR,
+jumpman_instance/Running_reg/CLR, jumpman_instance/SavePrincess_reg/CLR,
+jumpman_instance/in_air_reg/CLR, jumpman_instance/jumping_reg[0]/CLR,
+jumpman_instance/jumping_reg[1]/CLR, jumpman_instance/jumping_reg[2]/CLR,
+jumpman_instance/jumping_reg[3]/CLR, jumpman_instance/jumping_reg[4]/CLR,
+jumpman_instance/jumping_reg[5]/CLR, jumpman_instance/jumping_reg[6]/CLR,
+jumpman_instance/jumping_reg[7]/CLR (the first 15 of 349 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell jumpman_instance/jump_on_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) color_instance/jump_on_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
@@ -466,32 +2694,152 @@ Related violations: <none>
 
 SYNTH-10#1 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#2 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#3 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__2 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#4 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2__2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__3 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#5 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__4 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#6 Warning
 Wide multiplier  
-Detected multiplier at color_instance/barrel_on2__4 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at color_instance/jump_on2__5 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#7 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#8 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#9 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#10 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__10 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#11 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__11 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#12 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__12 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#13 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__13 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#14 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__14 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#15 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__15 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#16 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__16 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#17 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__17 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#18 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__18 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#19 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__19 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#20 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#21 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__20 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#22 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__21 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#23 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__22 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#24 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#25 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__4 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#26 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__5 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#27 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#28 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__7 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#29 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__8 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#30 Warning
+Wide multiplier  
+Detected multiplier at color_instance/jump_on3__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -666,22 +3014,72 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch color_instance/barrel_on_reg cannot be properly analyzed as its control pin color_instance/barrel_on_reg/G is not reached by a timing clock
+The latch color_instance/barrel2_on_reg cannot be properly analyzed as its control pin color_instance/barrel2_on_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch color_instance/girder_on_reg cannot be properly analyzed as its control pin color_instance/girder_on_reg/G is not reached by a timing clock
+The latch color_instance/barrel3_on_reg cannot be properly analyzed as its control pin color_instance/barrel3_on_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
+The latch color_instance/barrel4_on_reg cannot be properly analyzed as its control pin color_instance/barrel4_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch color_instance/barrel5_on_reg cannot be properly analyzed as its control pin color_instance/barrel5_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch color_instance/barrel_on_reg cannot be properly analyzed as its control pin color_instance/barrel_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch color_instance/dk_on_reg cannot be properly analyzed as its control pin color_instance/dk_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch color_instance/girder_on_reg cannot be properly analyzed as its control pin color_instance/girder_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch color_instance/jump_on_reg/L7 (in color_instance/jump_on_reg macro) cannot be properly analyzed as its control pin color_instance/jump_on_reg/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
 The latch color_instance/ladder_on_reg cannot be properly analyzed as its control pin color_instance/ladder_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch color_instance/lives_on_reg cannot be properly analyzed as its control pin color_instance/lives_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch color_instance/ones_on_reg cannot be properly analyzed as its control pin color_instance/ones_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch color_instance/princess_on_reg cannot be properly analyzed as its control pin color_instance/princess_on_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch color_instance/tens_on_reg cannot be properly analyzed as its control pin color_instance/tens_on_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 3 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 13 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 
